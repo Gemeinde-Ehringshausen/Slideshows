@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Slideshow mit Skalierung</title>
+  <style>
+    /* Grundlegendes Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* HTML und Body nehmen den gesamten sichtbaren Bereich ein */
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow: hidden; /* Verhindert Scrollen */
+    }
+
+    /* Das Iframe füllt den gesamten Bildschirm */
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; /* Füllt die gesamte Breite */
+      height: 100%; /* Füllt die gesamte Höhe */
+      border: none; /* Kein Rahmen */
+      transform: scale(1); /* Standard-Skalierung */
+      transform-origin: top left; /* Skalierung von oben links */
+    }
+  </style>
+  <script>
+    // Liste der URLs, die angezeigt werden sollen
+    const urls = [
+      'https://www.webkita.de/ehringshausen/infoportal/Info_Einrichtungen/info_Koelschhausen?10',
+      'https://www.webkita.de/ehringshausen/infoportal/Info_Einrichtungen?11',
+      'https://www.webkita.de/ehringshausen/infoportal/Info_Einrichtungen/info_Blauland?12'
+    ];
+    let index = 0;
+
+    // Funktion zum Wechseln der URL
+    function changeUrl() {
+      index = (index + 1) % urls.length; // Gehe zur nächsten URL (zyklisch)
+      document.getElementById('slideshow').src = urls[index];
+    }
+
+    // Intervall für den Wechsel (10 Sekunden)
+    setInterval(changeUrl, 10000); // 10000 ms = 10 Sekunden
+  </script>
+</head>
+<body>
+  <!-- Iframe für die Anzeige der Webseiten -->
+  <iframe id="slideshow" src="https://www.webkita.de/ehringshausen/infoportal/Info_Einrichtungen/info_Koelschhausen?10"></iframe>
+</body>
+</html>
