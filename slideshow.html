@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Infoportal Slideshow</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background: black;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+    .slide {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      box-sizing: border-box;
+      padding: 2rem;
+      color: #fff;
+      background: #222;
+    }
+    .slide.active {
+      display: block;
+    }
+    img, iframe {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+let index = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showNext() {
+  slides.forEach(s => s.classList.remove('active'));
+  slides[index].classList.add('active');
+  index = (index + 1) % slides.length;
+}
+
+showNext();
+setInterval(showNext, 10000); // 10 Sekunden
+</script>
+</body>
+</html>
