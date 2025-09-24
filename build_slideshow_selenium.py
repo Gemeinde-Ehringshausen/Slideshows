@@ -58,7 +58,16 @@ for url in links:
             main_content = soup.find("div", class_="infoportal")
             if main_content:
                 # Entferne Header, Footer und unnötige Elemente
-                for selector in ["nav.navbar", "div.footer", "div.modal", "div.wk_notification_container"]:
+                for selector in [
+                    "nav.navbar",  # Header-Navigation
+                    "div.footer",  # Footer
+                    "div.modal",   # Modale Dialoge
+                    "div.wk_notification_container",  # Benachrichtigungen
+                    "div.pull-right",  # Suchfeld und Links (FAQ, Artikelübersicht)
+                    "a[href*='infoportal-faq']",  # Link zu FAQ
+                    "a[href*='infoportal-uebersicht']",  # Link zur Artikelübersicht
+                    "a[href*='Zum Oberartikel']",  # Link "Zum Oberartikel"
+                ]:
                     for tag in soup.select(selector):
                         tag.decompose()
                 
