@@ -24,6 +24,1756 @@ body, html {
 </style>
 </head>
 <body>
+<div class="slide" id="slide0"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="./bs-3.4.1/css/bootstrap.min-ver-7F89537EAF606BFF49F5CC1A7C24DBCA.css">
+<script type="text/javascript" src="./wicket/resource/org.apache.wicket.resource.JQueryResourceReference/jquery/jquery-3.4.1-ver-D19AFC7779BBA20E96683BE58B330F62.js"></script>
+<script type="text/javascript" src="./wicket/resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/res/js/wicket-ajax-jquery-ver-3A8C326A8436172FC95523D517EBC88B.js"></script>
+<script type="text/javascript" id="wicket-ajax-base-url">
+/*<![CDATA[*/
+Wicket.Ajax.baseUrl="infoportal?4";
+/*]]>*/
+</script>
+<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+
+<title>webKITA - Online</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="de">
+<meta http-equiv="Cache-Control" content="no-cache, no-store">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="shortcut icon" type="image/x-icon">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="charset" content="UTF-8">
+<script type="text/javascript" id="bootstrap-js" src="./bs-3.4.1/js/bootstrap.min-ver-2F34B630FFE30BA2FF2B91E3F3C322A1.js"></script>
+<link rel="stylesheet" type="text/css" href="./wicket/resource/de.webkita.pub.basebs.ExternBsBasePage/ExternBsBasePage-ver-688D79FBC8C1C6845012F6DF21137733.css">
+<link rel="stylesheet" type="text/css" href="pubres/base-3.27.3.css" media="screen, projection">
+<link rel="stylesheet" type="text/css" href="pubres/print-3.27.3.css" media="print">
+<link rel="stylesheet" type="text/css" href="./bs-3.4.1/css/bootstrap.min-ver-7F89537EAF606BFF49F5CC1A7C24DBCA.css" media="print">
+<script type="text/javascript" src="js/focusHandler.js"></script>
+<script type="text/javascript" src="js/offcanvas.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+Wicket.Event.add(window, "domready", function(event) { 
+Wicket.Ajax.ajax({"u":"./infoportal?4-1.0-DeleteBenutzerModal-dialog-footer-buttons-0-button","m":"POST","c":"id21","f":"id20","sc":"DeleteBenutzerModal:dialog:footer:buttons:0:button","e":"click"});;
+Wicket.Ajax.ajax({"u":"./infoportal?4-1.0-DeleteBenutzerModal-dialog-footer-buttons-1-button","c":"id23","bsh":[function(attrs, jqXHR, settings){document.location.hash='id22';$('#id22').modal('hide');}],"e":"click"});;
+var id1ftogglePwElement = document.getElementById('id1ftogglePw');
+if (id1ftogglePwElement) {id1ftogglePwElement.addEventListener('change', function (e) {
+    const passwordInput = document.getElementById('id1f');
+    if (e.target.checked) {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
+});};
+$('#id22').modal({keyboard:true, show:false});
+Wicket.Ajax.ajax({"u":"./infoportal?4-1.0-SearchPanel-Form-SearchSubmit","m":"POST","c":"id25","f":"id24","sc":"SearchSubmit","e":"click","pd":true});;
+Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
+;});
+/*]]>*/
+</script>
+</head>
+
+<body class="wk_body_style">
+
+	<nav class="navbar navbar-fixed-top" style="padding-top: 5px; background: #fff;">
+		<div class="container">
+			<div class="wk_navbar_background">
+				<div class="navbar-header">
+					<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="./start">
+						<img class="img-responsive header-logo" src="pubres/logo-ehringshausen.png" alt="Logo Ehringshausen">
+					</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="./suche">Betreuungsangebot</a>
+						</li>
+						<li class="active">
+							<a href="./infoportal">Infoportal</a>
+						</li>
+						
+						
+			
+						<li id="id26"><a href="./sb/login">Login</a></li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div id="id22" class="modal" tabindex="-1" data-backdrop="false" role="dialog" aria-labelledby="id27" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="id28">×</button>
+                        <h4 class="modal-title" id="id27">Elternkonto löschen</h4>
+                    </div>
+                    <div class="modal-body">
+                        
+		
+		<br>
+		<div style="margin-bottom: 20px; max-height: 400px; overflow:auto;" id="id29">Sind Sie sicher, dass Sie Ihr Benutzerkonto löschen möchten? Alle Ihre abgegebenen Vormerkungen und erhaltenen Platzangebote werden gelöscht!</div>
+		<form id="id20" method="post" action="./infoportal?4-1.-DeleteBenutzerModal-Form"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden" class="hidden-fields"><input type="text" tabindex="-1" autocomplete="off"><input type="submit" tabindex="-1" name="DeleteBenutzerModal:dialog:footer:buttons:0:button" onclick=" var b=document.getElementById('id21'); if (b!=null&amp;&amp;b.onclick!=null&amp;&amp;typeof(b.onclick) != 'undefined') {  var r = Wicket.bind(b.onclick, b)(); if (r != false) b.click(); } else { b.click(); };  return false;"></div>
+			<div class="row">
+				<div class="col-xs-12"><div class=" form-group required">
+            <label class="control-label" for="id1f">Bitte geben Sie zur Überprüfung Ihr Benutzerkennwort ein</label>
+            
+            
+
+            <div class="input-group"><input class="form-control" type="password" placeholder="" value="" name="Password:formgroup:formgroup_body:Password" id="id1f"><span class="input-group-addon"><input type="checkbox" id="id1ftogglePw"> Zeigen</span></div>
+            
+             <div class="row">
+            	<div class="col-xs-12">
+            		
+		            
+		            
+	            </div>
+            </div>
+
+            
+            
+        </div></div>
+			</div>
+		</form>
+	
+                    </div>
+                    <div class="modal-footer">
+                        
+                            <button type="button" id="id21" class="btn  btn-danger">
+            <i class="glyphicon glyphicon-remove"></i>&nbsp;Benutzerkonto löschen
+        </button>
+                        
+                            <button type="button" id="id23" data-dismiss="modal" class="btn  btn-default">Abbrechen</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+	<div id="id2a" style="display:none" data-wicket-placeholder=""></div>
+	<div class="col-xs-12" style="color: red;" id="id2b">
+            
+        </div>
+	
+		<div class="container wk_container_formatter">
+			
+
+
+	<noscript>
+		<div class="alert alert-warning">
+			<div class="row">
+				<div class="col col-xs-12 col-sm-2 text-center">
+					<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"
+						style="font-size: 50px;"></span>
+				</div>
+				<div class="col col-xs-12 col-sm-10">
+					<strong>Ist JavaScript in Ihrem Browser deaktiviert?</strong>&nbsp;<span>Da
+						viele Funktionen von Webkita auf JavaScript basieren, können Sie
+						die Anwendung nicht in vollem Umfang nutzen und haben eventuell
+						Probleme beim Anzeigen einiger Seiten. Hier finden Sie kurze
+						Anleitungen für die jeweiligen Browser, wie Sie JavaScript in
+						Ihrem Browser aktivieren können.</span>
+				</div>
+			</div>
+			<div class="row">
+			<div class="col col-xs-12 text-center">
+				<a href="./nojavascript" class="btn  btn-lg btn-link">
+            <i class="glyphicon glyphicon-arrow-right"></i>&nbsp;Anleitung: JavaScript aktivieren
+        </a>
+			</div>
+			</div>
+		</div>
+	</noscript>
+
+
+
+		</div>
+		
+		
+		<div class="container infoportal">
+			<div class="row">
+				<div class="col-xs-12" style="padding-left: 60px; padding-right: 60px;" id="BorkenPadding">
+					<div class="pull-right">
+
+	<form id="id24" method="post" action="./infoportal?4-1.-SearchPanel-Form" class="form-inline">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Infoportal durchsuchen" value="" name="SearchInput">
+
+			<div class="input-group-btn">
+				<button name="SearchSubmit" id="id25" class="btn  btn-primary">
+            <i class="glyphicon glyphicon-search"></i>
+        </button>
+				<!-- <button wicket:id="Reset"></button> -->
+			</div>
+		</div>
+	<input type="hidden" value="Zgv12sFK5pk922OfdWlJP7gU_QU" name="csrfToken"></form>
+
+</div>
+					<a class="pull-right btn  btn-link" href="./infoportal-faq">
+            FAQ
+        </a> <a class="pull-right btn  btn-link" href="./infoportal-uebersicht">
+            Artikelübersicht
+        </a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					
+		
+	
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 ">
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="BorkenPadding" class="jumbotron">
+					<div class="row">
+						
+					</div>
+					
+	<div class="clearfix">
+		<div class="col-xs-12" id="BorkenPadding">
+			<h1>Herzlich Willkommen im Info-Portal der Ehringshäuser Betreuungseinrichtungen</h1>
+			<p></p>
+		</div>
+	</div>
+	
+
+				</div>
+			</div>
+		</div>
+		
+	<div class="row">
+		<div class="col-md-12" style="padding-left: 60px; padding-right: 60px;" id="BorkenPadding">
+			<div class="col-md-6">
+				<div>
+	<div class="infoportal-previewbox">
+		<div class="text-muted infoportal-preview header_content">
+			<h3 class="">Der digitale Weg zum Betreuungsplatz</h3>
+			<div class=""><p><img src="https://www.webkita.de/ehringshausen/bilder/infoportal/25954/bild.jpg" alt="wegweiser_Kind_2"></p></div>
+		</div>
+
+		<div>
+			<a href="./infoportal/anleitung" class="btn  btn-primary">
+            Artikel lesen »
+        </a>
+		</div>
+
+	</div>
+	
+</div>
+			</div><div class="col-md-6">
+				<div>
+	<div class="infoportal-previewbox">
+		<div class="text-muted infoportal-preview header_content">
+			<h3 class="">Unsere Einrichtungen stellen sich vor</h3>
+			<div class=""><p><img src="https://www.webkita.de/ehringshausen/bilder/infoportal/25375/bild.jpg" alt="BO_Katzenfurt"><img src="https://www.webkita.de/ehringshausen/bilder/infoportal/25376/bild.jpg" alt="BO_Mullewapp"></p>
+<p><img src="https://www.webkita.de/ehringshausen/bilder/infoportal/25371/bild.jpg" alt="BO_Dillwiese"><img src="https://www.webkita.de/ehringshausen/bilder/infoportal/25371/bild.jpg" alt="BO_Dillwiese"></p></div>
+		</div>
+
+		<div>
+			<a href="./infoportal/Info_Einrichtungen" class="btn  btn-primary">
+            Artikel lesen »
+        </a>
+		</div>
+
+	</div>
+	
+</div>
+			</div><div class="col-md-6">
+				<div>
+	<div class="infoportal-previewbox">
+		<div class="text-muted infoportal-preview header_content">
+			<h3 class="">Formulare</h3>
+			<div class=""><p><img src="https://www.webkita.de/ehringshausen/bilder/infoportal/24398/bild.jpg" alt="BO_Stifte"></p></div>
+		</div>
+
+		<div>
+			<a href="./infoportal/Formulare" class="btn  btn-primary">
+            Artikel lesen »
+        </a>
+		</div>
+
+	</div>
+	
+</div>
+			</div><div class="col-md-6">
+				<div>
+	<div class="infoportal-previewbox">
+		<div class="text-muted infoportal-preview header_content">
+			<h3 class="">Gebühren und Satzungen</h3>
+			<div class=""><p><img src="https://www.webkita.de/ehringshausen/bilder/infoportal/27973/bild.jpg" alt="pexels-karolina-grabowska-4040899" width="347" height="521"></p></div>
+		</div>
+
+		<div>
+			<a href="./infoportal/Satzungen_Gebuehren" class="btn  btn-primary">
+            Artikel lesen »
+        </a>
+		</div>
+
+	</div>
+	
+</div>
+			</div><div class="col-md-6">
+				<div>
+	<div class="infoportal-previewbox">
+		<div class="text-muted infoportal-preview header_content">
+			<h3 class="">Unser Leitbild</h3>
+			<div class=""><p><img class="img-responsive" src="https://www.webkita.de/ehringshausen/bilder/infoportal/42503/bild.jpg" alt="Leitbild"></p></div>
+		</div>
+
+		<div>
+			<a href="./infoportal/Leitbild" class="btn  btn-primary">
+            Artikel lesen »
+        </a>
+		</div>
+
+	</div>
+	
+</div>
+			</div>
+		</div>
+	</div>
+
+	
+	
+				</div>
+			</div>
+		</div>
+	
+		<div class="wk_notification_container hidden-xs hidden-sm hidden-md" style="width: 400px; position: fixed; bottom: 50px; right: 30px; z-index: 999999;" id="id2c">
+	
+</div>
+		<div class="wk_notification_container visible-xs visible-sm visible-md" style="position: fixed; bottom: 50px; right: 10px; z-index: 999999;" id="id2d">
+	
+</div>
+	
+	
+	<div class="footer-tannen"></div>
+	<div class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="row-ehr">
+						<div class="columns">
+							<h4 class="footer-hl"><strong>Kontakt</strong></h4>
+							<div class="finfo">
+								<p>Gemeinde Ehringshausen</p>
+								<p>Rathausstraße 1</p>
+								<p>35630 Ehringshausen</p>
+							</div>
+							<div class="finfo">
+								<p>06443 609-0</p>
+								<p>06443 609-12</p>
+								<p><a href="mailto:info@ehringshausen.de" target="_blank">info@ehringshausen.de</a></p>
+							</div>
+						</div>
+						<div class="columns">
+							<h4 class="footer-hl"><strong>Quicklinks</strong></h4>
+							<a style="color: #fff" href="./infoportal?4-1.-Impressum" class="btn  btn-link">
+            Impressum
+        </a>
+						</div>
+						<div class="columns">
+							<img class="img-responsive footer-wappen" src="pubres/wappen-ehringshausen.png" alt="Wappen Ehringshausen">
+						</div>	
+					</div>			
+				
+					<div class="pull-right">
+						<div>powered by webKITA 3.27.3 <a href="https://www.webkita.de" target="_blank">www.webkita.de</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body></html></div>
+<div class="slide" id="slide1"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="../bs-3.4.1/css/bootstrap.min-ver-7F89537EAF606BFF49F5CC1A7C24DBCA.css">
+<script type="text/javascript" src="../wicket/resource/org.apache.wicket.resource.JQueryResourceReference/jquery/jquery-3.4.1-ver-D19AFC7779BBA20E96683BE58B330F62.js"></script>
+<script type="text/javascript" src="../wicket/resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/res/js/wicket-ajax-jquery-ver-3A8C326A8436172FC95523D517EBC88B.js"></script>
+<script type="text/javascript" id="wicket-ajax-base-url">
+/*<![CDATA[*/
+Wicket.Ajax.baseUrl="infoportal/Info_Einrichtungen?5";
+/*]]>*/
+</script>
+<link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css">
+
+<title>webKITA - Online</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="de">
+<meta http-equiv="Cache-Control" content="no-cache, no-store">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="shortcut icon" type="image/x-icon">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="charset" content="UTF-8">
+<script type="text/javascript" id="bootstrap-js" src="../bs-3.4.1/js/bootstrap.min-ver-2F34B630FFE30BA2FF2B91E3F3C322A1.js"></script>
+<link rel="stylesheet" type="text/css" href="../wicket/resource/de.webkita.pub.basebs.ExternBsBasePage/ExternBsBasePage-ver-688D79FBC8C1C6845012F6DF21137733.css">
+<link rel="stylesheet" type="text/css" href="../pubres/base-3.27.3.css" media="screen, projection">
+<link rel="stylesheet" type="text/css" href="../pubres/print-3.27.3.css" media="print">
+<link rel="stylesheet" type="text/css" href="../bs-3.4.1/css/bootstrap.min-ver-7F89537EAF606BFF49F5CC1A7C24DBCA.css" media="print">
+<script type="text/javascript" src="../js/focusHandler.js"></script>
+<script type="text/javascript" src="../js/offcanvas.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+Wicket.Event.add(window, "domready", function(event) { 
+Wicket.Ajax.ajax({"u":"./Info_Einrichtungen?5-1.0-DeleteBenutzerModal-dialog-footer-buttons-0-button","m":"POST","c":"id30","f":"id2f","sc":"DeleteBenutzerModal:dialog:footer:buttons:0:button","e":"click"});;
+Wicket.Ajax.ajax({"u":"./Info_Einrichtungen?5-1.0-DeleteBenutzerModal-dialog-footer-buttons-1-button","c":"id32","bsh":[function(attrs, jqXHR, settings){document.location.hash='id31';$('#id31').modal('hide');}],"e":"click"});;
+var id2etogglePwElement = document.getElementById('id2etogglePw');
+if (id2etogglePwElement) {id2etogglePwElement.addEventListener('change', function (e) {
+    const passwordInput = document.getElementById('id2e');
+    if (e.target.checked) {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
+});};
+$('#id31').modal({keyboard:true, show:false});
+Wicket.Ajax.ajax({"u":"./Info_Einrichtungen?5-1.0-SearchPanel-Form-SearchSubmit","m":"POST","c":"id34","f":"id33","sc":"SearchSubmit","e":"click","pd":true});;
+Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
+;});
+/*]]>*/
+</script>
+</head>
+
+<body class="wk_body_style">
+
+	<nav class="navbar navbar-fixed-top" style="padding-top: 5px; background: #fff;">
+		<div class="container">
+			<div class="wk_navbar_background">
+				<div class="navbar-header">
+					<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="../start">
+						<img class="img-responsive header-logo" src="../pubres/logo-ehringshausen.png" alt="Logo Ehringshausen">
+					</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="../suche">Betreuungsangebot</a>
+						</li>
+						<li class="active">
+							<a href="../infoportal">Infoportal</a>
+						</li>
+						
+						
+			
+						<li id="id35"><a href="../sb/login">Login</a></li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div id="id31" class="modal" tabindex="-1" data-backdrop="false" role="dialog" aria-labelledby="id36" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="id37">×</button>
+                        <h4 class="modal-title" id="id36">Elternkonto löschen</h4>
+                    </div>
+                    <div class="modal-body">
+                        
+		
+		<br>
+		<div style="margin-bottom: 20px; max-height: 400px; overflow:auto;" id="id38">Sind Sie sicher, dass Sie Ihr Benutzerkonto löschen möchten? Alle Ihre abgegebenen Vormerkungen und erhaltenen Platzangebote werden gelöscht!</div>
+		<form id="id2f" method="post" action="./Info_Einrichtungen?5-1.-DeleteBenutzerModal-Form"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden" class="hidden-fields"><input type="text" tabindex="-1" autocomplete="off"><input type="submit" tabindex="-1" name="DeleteBenutzerModal:dialog:footer:buttons:0:button" onclick=" var b=document.getElementById('id30'); if (b!=null&amp;&amp;b.onclick!=null&amp;&amp;typeof(b.onclick) != 'undefined') {  var r = Wicket.bind(b.onclick, b)(); if (r != false) b.click(); } else { b.click(); };  return false;"></div>
+			<div class="row">
+				<div class="col-xs-12"><div class=" form-group required">
+            <label class="control-label" for="id2e">Bitte geben Sie zur Überprüfung Ihr Benutzerkennwort ein</label>
+            
+            
+
+            <div class="input-group"><input class="form-control" type="password" placeholder="" value="" name="Password:formgroup:formgroup_body:Password" id="id2e"><span class="input-group-addon"><input type="checkbox" id="id2etogglePw"> Zeigen</span></div>
+            
+             <div class="row">
+            	<div class="col-xs-12">
+            		
+		            
+		            
+	            </div>
+            </div>
+
+            
+            
+        </div></div>
+			</div>
+		</form>
+	
+                    </div>
+                    <div class="modal-footer">
+                        
+                            <button type="button" id="id30" class="btn  btn-danger">
+            <i class="glyphicon glyphicon-remove"></i>&nbsp;Benutzerkonto löschen
+        </button>
+                        
+                            <button type="button" id="id32" data-dismiss="modal" class="btn  btn-default">Abbrechen</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+	<div id="id39" style="display:none" data-wicket-placeholder=""></div>
+	<div class="col-xs-12" style="color: red;" id="id3a">
+            
+        </div>
+	
+		<div class="container wk_container_formatter">
+			
+
+
+	<noscript>
+		<div class="alert alert-warning">
+			<div class="row">
+				<div class="col col-xs-12 col-sm-2 text-center">
+					<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"
+						style="font-size: 50px;"></span>
+				</div>
+				<div class="col col-xs-12 col-sm-10">
+					<strong>Ist JavaScript in Ihrem Browser deaktiviert?</strong>&nbsp;<span>Da
+						viele Funktionen von Webkita auf JavaScript basieren, können Sie
+						die Anwendung nicht in vollem Umfang nutzen und haben eventuell
+						Probleme beim Anzeigen einiger Seiten. Hier finden Sie kurze
+						Anleitungen für die jeweiligen Browser, wie Sie JavaScript in
+						Ihrem Browser aktivieren können.</span>
+				</div>
+			</div>
+			<div class="row">
+			<div class="col col-xs-12 text-center">
+				<a href="../nojavascript" class="btn  btn-lg btn-link">
+            <i class="glyphicon glyphicon-arrow-right"></i>&nbsp;Anleitung: JavaScript aktivieren
+        </a>
+			</div>
+			</div>
+		</div>
+	</noscript>
+
+
+
+		</div>
+		
+		
+		<div class="container infoportal">
+			<div class="row">
+				<div class="col-xs-12" style="padding-left: 60px; padding-right: 60px;" id="BorkenPadding">
+					<div class="pull-right">
+
+	<form id="id33" method="post" action="./Info_Einrichtungen?5-1.-SearchPanel-Form" class="form-inline">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Infoportal durchsuchen" value="" name="SearchInput">
+
+			<div class="input-group-btn">
+				<button name="SearchSubmit" id="id34" class="btn  btn-primary">
+            <i class="glyphicon glyphicon-search"></i>
+        </button>
+				<!-- <button wicket:id="Reset"></button> -->
+			</div>
+		</div>
+	<input type="hidden" value="Zgv12sFK5pk922OfdWlJP7gU_QU" name="csrfToken"></form>
+
+</div>
+					<a class="pull-right btn  btn-link" href="../infoportal-faq">
+            FAQ
+        </a> <a class="pull-right btn  btn-link" href="../infoportal-uebersicht">
+            Artikelübersicht
+        </a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					
+		
+	
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 ">
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="BorkenPadding" class="jumbotron">
+					<div class="row">
+						<a href="./Info_Einrichtungen?5-1.-Panel-jumbotron-OberArtikelButton" class="btn  btn-default">
+            <i class="glyphicon glyphicon-arrow-up"></i>&nbsp;Zum Oberartikel
+        </a>
+					</div>
+					
+	<div class="clearfix">
+		<div class="col-xs-12" id="BorkenPadding">
+			<h1>Unsere Einrichtungen stellen sich vor</h1>
+			<p></p>
+		</div>
+	</div>
+	
+
+				</div>
+			</div>
+		</div>
+		
+	<div class="row">
+		<div class="col-md-12" style="padding-left: 60px; padding-right: 60px;" id="BorkenPadding">
+			<div class="col-md-6">
+				<div>
+	<div class="infoportal-previewbox">
+		<div class="text-muted infoportal-preview header_content">
+			<h3 class="">Kita "Blauland"</h3>
+			<div class=""><p><img style="width:450px;height:200px" src="https://www.webkita.de/ehringshausen/bilder/infoportal/39880/bild.jpg" alt="Blauland"></p></div>
+		</div>
+
+		<div>
+			<a href="./Info_Einrichtungen/info_Blauland" class="btn  btn-primary">
+            Artikel lesen »
+        </a>
+		</div>
+
+	</div>
+	
+</div>
+			</div><div class="col-md-6">
+				<div>
+	<div class="infoportal-previewbox">
+		<div class="text-muted infoportal-preview header_content">
+			<h3 class="">Kita "gestiefelter Kater" Katzenfurt</h3>
+			<div class=""><p><img src="https://www.webkita.de/ehringshausen/bilder/infoportal/25375/bild.jpg" alt="BO_Katzenfurt"></p></div>
+		</div>
+
+		<div>
+			<a href="./Info_Einrichtungen/info_Katzenfurt" class="btn  btn-primary">
+            Artikel lesen »
+        </a>
+		</div>
+
+	</div>
+	
+</div>
+			</div><div class="col-md-6">
+				<div>
+	<div class="infoportal-previewbox">
+		<div class="text-muted infoportal-preview header_content">
+			<h3 class="">Kita "Mullewapp" Kölschhausen</h3>
+			<div class=""><p><img src="https://www.webkita.de/ehringshausen/bilder/infoportal/25376/bild.jpg" alt="BO_Mullewapp"></p></div>
+		</div>
+
+		<div>
+			<a href="./Info_Einrichtungen/info_Koelschhausen" class="btn  btn-primary">
+            Artikel lesen »
+        </a>
+		</div>
+
+	</div>
+	
+</div>
+			</div><div class="col-md-6">
+				<div>
+	<div class="infoportal-previewbox">
+		<div class="text-muted infoportal-preview header_content">
+			<h3 class="">Betreute Grundschule Ehringshausen</h3>
+			<div class=""><p><img src="https://www.webkita.de/ehringshausen/bilder/infoportal/27938/bild.jpg" alt="BGS EH"></p></div>
+		</div>
+
+		<div>
+			<a href="./Info_Einrichtungen/info_bgseh" class="btn  btn-primary">
+            Artikel lesen »
+        </a>
+		</div>
+
+	</div>
+	
+</div>
+			</div><div class="col-md-6">
+				<div>
+	<div class="infoportal-previewbox">
+		<div class="text-muted infoportal-preview header_content">
+			<h3 class="">Betreute Grundschule Katzenfurt</h3>
+			<div class=""><p><img src="https://www.webkita.de/ehringshausen/bilder/infoportal/27937/bild.jpg" alt="BGS KA"></p></div>
+		</div>
+
+		<div>
+			<a href="./Info_Einrichtungen/info_bgska" class="btn  btn-primary">
+            Artikel lesen »
+        </a>
+		</div>
+
+	</div>
+	
+</div>
+			</div><div class="col-md-6">
+				<div>
+	<div class="infoportal-previewbox">
+		<div class="text-muted infoportal-preview header_content">
+			<h3 class="">Kinderkrippe Krabbelkiste</h3>
+			<div class=""><p><img style="width:450px;height:180px" src="https://www.webkita.de/ehringshausen/bilder/infoportal/39881/bild.jpg" alt="Krabbelkiste"></p></div>
+		</div>
+
+		<div>
+			<a href="./Info_Einrichtungen/Krabbelkiste" class="btn  btn-primary">
+            Artikel lesen »
+        </a>
+		</div>
+
+	</div>
+	
+</div>
+			</div><div class="col-md-6">
+				<div>
+	<div class="infoportal-previewbox">
+		<div class="text-muted infoportal-preview header_content">
+			<h3 class="">Kita Zauberberg</h3>
+			<div class=""><p class="paragraph" style="margin:0px 0px 1rem;padding:0px;font-size:14px;line-height:1.6;color:#373737;font-family:'open sans' , 'arial' , sans-serif;font-style:normal;font-weight:400;letter-spacing:normal;text-indent:0px;text-transform:none;word-spacing:0px;white-space:normal;background-color:#ffffff">&nbsp;<img style="width:350px;height:150px" src="https://www.webkita.de/ehringshausen/bilder/infoportal/39830/bild.jpg" alt="Zauberberg"></p></div>
+		</div>
+
+		<div>
+			<a href="./Info_Einrichtungen/Zauberberg" class="btn  btn-primary">
+            Artikel lesen »
+        </a>
+		</div>
+
+	</div>
+	
+</div>
+			</div><div class="col-md-6">
+				<div>
+	<div class="infoportal-previewbox">
+		<div class="text-muted infoportal-preview header_content">
+			<h3 class="">Waldkindergarten - "Die Waldmäuse"</h3>
+			<div class=""><p><img class="img-responsive" src="https://www.webkita.de/ehringshausen/bilder/infoportal/42507/bild.jpg" alt="Waldmäuse"></p></div>
+		</div>
+
+		<div>
+			<a href="./Info_Einrichtungen/Waldmaeuse" class="btn  btn-primary">
+            Artikel lesen »
+        </a>
+		</div>
+
+	</div>
+	
+</div>
+			</div>
+		</div>
+	</div>
+
+	
+	
+				</div>
+			</div>
+		</div>
+	
+		<div class="wk_notification_container hidden-xs hidden-sm hidden-md" style="width: 400px; position: fixed; bottom: 50px; right: 30px; z-index: 999999;" id="id3b">
+	
+</div>
+		<div class="wk_notification_container visible-xs visible-sm visible-md" style="position: fixed; bottom: 50px; right: 10px; z-index: 999999;" id="id3c">
+	
+</div>
+	
+	
+	<div class="footer-tannen"></div>
+	<div class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="row-ehr">
+						<div class="columns">
+							<h4 class="footer-hl"><strong>Kontakt</strong></h4>
+							<div class="finfo">
+								<p>Gemeinde Ehringshausen</p>
+								<p>Rathausstraße 1</p>
+								<p>35630 Ehringshausen</p>
+							</div>
+							<div class="finfo">
+								<p>06443 609-0</p>
+								<p>06443 609-12</p>
+								<p><a href="mailto:info@ehringshausen.de" target="_blank">info@ehringshausen.de</a></p>
+							</div>
+						</div>
+						<div class="columns">
+							<h4 class="footer-hl"><strong>Quicklinks</strong></h4>
+							<a style="color: #fff" href="./Info_Einrichtungen?5-1.-Impressum" class="btn  btn-link">
+            Impressum
+        </a>
+						</div>
+						<div class="columns">
+							<img class="img-responsive footer-wappen" src="../pubres/wappen-ehringshausen.png" alt="Wappen Ehringshausen">
+						</div>	
+					</div>			
+				
+					<div class="pull-right">
+						<div>powered by webKITA 3.27.3 <a href="https://www.webkita.de" target="_blank">www.webkita.de</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body></html></div>
+<div class="slide" id="slide2"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="../bs-3.4.1/css/bootstrap.min-ver-7F89537EAF606BFF49F5CC1A7C24DBCA.css">
+<script type="text/javascript" src="../wicket/resource/org.apache.wicket.resource.JQueryResourceReference/jquery/jquery-3.4.1-ver-D19AFC7779BBA20E96683BE58B330F62.js"></script>
+<script type="text/javascript" src="../wicket/resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/res/js/wicket-ajax-jquery-ver-3A8C326A8436172FC95523D517EBC88B.js"></script>
+<script type="text/javascript" id="wicket-ajax-base-url">
+/*<![CDATA[*/
+Wicket.Ajax.baseUrl="infoportal/Formulare?6";
+/*]]>*/
+</script>
+<link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css">
+
+<title>webKITA - Online</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="de">
+<meta http-equiv="Cache-Control" content="no-cache, no-store">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="shortcut icon" type="image/x-icon">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="charset" content="UTF-8">
+<script type="text/javascript" id="bootstrap-js" src="../bs-3.4.1/js/bootstrap.min-ver-2F34B630FFE30BA2FF2B91E3F3C322A1.js"></script>
+<link rel="stylesheet" type="text/css" href="../wicket/resource/de.webkita.pub.basebs.ExternBsBasePage/ExternBsBasePage-ver-688D79FBC8C1C6845012F6DF21137733.css">
+<link rel="stylesheet" type="text/css" href="../pubres/base-3.27.3.css" media="screen, projection">
+<link rel="stylesheet" type="text/css" href="../pubres/print-3.27.3.css" media="print">
+<link rel="stylesheet" type="text/css" href="../bs-3.4.1/css/bootstrap.min-ver-7F89537EAF606BFF49F5CC1A7C24DBCA.css" media="print">
+<script type="text/javascript" src="../js/focusHandler.js"></script>
+<script type="text/javascript" src="../js/offcanvas.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+Wicket.Event.add(window, "domready", function(event) { 
+Wicket.Ajax.ajax({"u":"./Formulare?6-1.0-DeleteBenutzerModal-dialog-footer-buttons-0-button","m":"POST","c":"id3f","f":"id3e","sc":"DeleteBenutzerModal:dialog:footer:buttons:0:button","e":"click"});;
+Wicket.Ajax.ajax({"u":"./Formulare?6-1.0-DeleteBenutzerModal-dialog-footer-buttons-1-button","c":"id41","bsh":[function(attrs, jqXHR, settings){document.location.hash='id40';$('#id40').modal('hide');}],"e":"click"});;
+var id3dtogglePwElement = document.getElementById('id3dtogglePw');
+if (id3dtogglePwElement) {id3dtogglePwElement.addEventListener('change', function (e) {
+    const passwordInput = document.getElementById('id3d');
+    if (e.target.checked) {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
+});};
+$('#id40').modal({keyboard:true, show:false});
+Wicket.Ajax.ajax({"u":"./Formulare?6-1.0-SearchPanel-Form-SearchSubmit","m":"POST","c":"id43","f":"id42","sc":"SearchSubmit","e":"click","pd":true});;
+Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
+;});
+/*]]>*/
+</script>
+</head>
+
+<body class="wk_body_style">
+
+	<nav class="navbar navbar-fixed-top" style="padding-top: 5px; background: #fff;">
+		<div class="container">
+			<div class="wk_navbar_background">
+				<div class="navbar-header">
+					<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="../start">
+						<img class="img-responsive header-logo" src="../pubres/logo-ehringshausen.png" alt="Logo Ehringshausen">
+					</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="../suche">Betreuungsangebot</a>
+						</li>
+						<li class="active">
+							<a href="../infoportal">Infoportal</a>
+						</li>
+						
+						
+			
+						<li id="id44"><a href="../sb/login">Login</a></li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div id="id40" class="modal" tabindex="-1" data-backdrop="false" role="dialog" aria-labelledby="id45" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="id46">×</button>
+                        <h4 class="modal-title" id="id45">Elternkonto löschen</h4>
+                    </div>
+                    <div class="modal-body">
+                        
+		
+		<br>
+		<div style="margin-bottom: 20px; max-height: 400px; overflow:auto;" id="id47">Sind Sie sicher, dass Sie Ihr Benutzerkonto löschen möchten? Alle Ihre abgegebenen Vormerkungen und erhaltenen Platzangebote werden gelöscht!</div>
+		<form id="id3e" method="post" action="./Formulare?6-1.-DeleteBenutzerModal-Form"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden" class="hidden-fields"><input type="text" tabindex="-1" autocomplete="off"><input type="submit" tabindex="-1" name="DeleteBenutzerModal:dialog:footer:buttons:0:button" onclick=" var b=document.getElementById('id3f'); if (b!=null&amp;&amp;b.onclick!=null&amp;&amp;typeof(b.onclick) != 'undefined') {  var r = Wicket.bind(b.onclick, b)(); if (r != false) b.click(); } else { b.click(); };  return false;"></div>
+			<div class="row">
+				<div class="col-xs-12"><div class=" form-group required">
+            <label class="control-label" for="id3d">Bitte geben Sie zur Überprüfung Ihr Benutzerkennwort ein</label>
+            
+            
+
+            <div class="input-group"><input class="form-control" type="password" placeholder="" value="" name="Password:formgroup:formgroup_body:Password" id="id3d"><span class="input-group-addon"><input type="checkbox" id="id3dtogglePw"> Zeigen</span></div>
+            
+             <div class="row">
+            	<div class="col-xs-12">
+            		
+		            
+		            
+	            </div>
+            </div>
+
+            
+            
+        </div></div>
+			</div>
+		</form>
+	
+                    </div>
+                    <div class="modal-footer">
+                        
+                            <button type="button" id="id3f" class="btn  btn-danger">
+            <i class="glyphicon glyphicon-remove"></i>&nbsp;Benutzerkonto löschen
+        </button>
+                        
+                            <button type="button" id="id41" data-dismiss="modal" class="btn  btn-default">Abbrechen</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+	<div id="id48" style="display:none" data-wicket-placeholder=""></div>
+	<div class="col-xs-12" style="color: red;" id="id49">
+            
+        </div>
+	
+		<div class="container wk_container_formatter">
+			
+
+
+	<noscript>
+		<div class="alert alert-warning">
+			<div class="row">
+				<div class="col col-xs-12 col-sm-2 text-center">
+					<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"
+						style="font-size: 50px;"></span>
+				</div>
+				<div class="col col-xs-12 col-sm-10">
+					<strong>Ist JavaScript in Ihrem Browser deaktiviert?</strong>&nbsp;<span>Da
+						viele Funktionen von Webkita auf JavaScript basieren, können Sie
+						die Anwendung nicht in vollem Umfang nutzen und haben eventuell
+						Probleme beim Anzeigen einiger Seiten. Hier finden Sie kurze
+						Anleitungen für die jeweiligen Browser, wie Sie JavaScript in
+						Ihrem Browser aktivieren können.</span>
+				</div>
+			</div>
+			<div class="row">
+			<div class="col col-xs-12 text-center">
+				<a href="../nojavascript" class="btn  btn-lg btn-link">
+            <i class="glyphicon glyphicon-arrow-right"></i>&nbsp;Anleitung: JavaScript aktivieren
+        </a>
+			</div>
+			</div>
+		</div>
+	</noscript>
+
+
+
+		</div>
+		
+		
+		<div class="container infoportal">
+			<div class="row">
+				<div class="col-xs-12" style="padding-left: 60px; padding-right: 60px;" id="BorkenPadding">
+					<div class="pull-right">
+
+	<form id="id42" method="post" action="./Formulare?6-1.-SearchPanel-Form" class="form-inline">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Infoportal durchsuchen" value="" name="SearchInput">
+
+			<div class="input-group-btn">
+				<button name="SearchSubmit" id="id43" class="btn  btn-primary">
+            <i class="glyphicon glyphicon-search"></i>
+        </button>
+				<!-- <button wicket:id="Reset"></button> -->
+			</div>
+		</div>
+	<input type="hidden" value="Zgv12sFK5pk922OfdWlJP7gU_QU" name="csrfToken"></form>
+
+</div>
+					<a class="pull-right btn  btn-link" href="../infoportal-faq">
+            FAQ
+        </a> <a class="pull-right btn  btn-link" href="../infoportal-uebersicht">
+            Artikelübersicht
+        </a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					
+		
+	
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 ">
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="BorkenPadding" class="jumbotron">
+					<div class="row">
+						<a href="./Formulare?6-1.-Panel-jumbotron-OberArtikelButton" class="btn  btn-default">
+            <i class="glyphicon glyphicon-arrow-up"></i>&nbsp;Zum Oberartikel
+        </a>
+					</div>
+					
+	<div class="clearfix">
+		<div class="col-xs-12" id="BorkenPadding">
+			<h1>Formulare</h1>
+			<p></p><p>Nachfolgend finden Sie eine Vielzahl von Formularen, die für die Anmeldung und spätere Betreuung Ihres Kindes erforderlich sind.&nbsp;</p>
+<p>&nbsp;</p>
+<p>Sie können diese direkt am PC ausfüllen und uns über die Upload-Funktion in Ihrem Webkita-Konto wieder zukommen lassen.&nbsp;</p><p></p>
+		</div>
+	</div>
+	<div class="col-md-12" style="margin-bottom: 20px;">
+		<fieldset>
+			<legend>Anhänge</legend>
+			<div class="col-xs-12">
+				<a class="btn btn-link" href="./Formulare?6-1.-Panel-jumbotron-Article-DokumentContainer-ListView-0-ListItem">
+					Belehrung Datenschutz (.pdf)
+				</a>
+			</div><div class="col-xs-12">
+				<a class="btn btn-link" href="./Formulare?6-1.-Panel-jumbotron-Article-DokumentContainer-ListView-1-ListItem">
+					Belehrung Infektionsschutzgesetz (.pdf)
+				</a>
+			</div><div class="col-xs-12">
+				<a class="btn btn-link" href="./Formulare?6-1.-Panel-jumbotron-Article-DokumentContainer-ListView-2-ListItem">
+					Impfbescheinigung (.pdf)
+				</a>
+			</div><div class="col-xs-12">
+				<a class="btn btn-link" href="./Formulare?6-1.-Panel-jumbotron-Article-DokumentContainer-ListView-3-ListItem">
+					Erteilung Abholberechtigungen (.pdf)
+				</a>
+			</div><div class="col-xs-12">
+				<a class="btn btn-link" href="./Formulare?6-1.-Panel-jumbotron-Article-DokumentContainer-ListView-4-ListItem">
+					Einverständnis Entfernung Zecken (.pdf)
+				</a>
+			</div><div class="col-xs-12">
+				<a class="btn btn-link" href="./Formulare?6-1.-Panel-jumbotron-Article-DokumentContainer-ListView-5-ListItem">
+					SEPA-Mandat (.pdf)
+				</a>
+			</div>
+		</fieldset>
+	</div>
+
+				</div>
+			</div>
+		</div>
+		
+	<div class="row">
+		<div class="col-md-12" style="padding-left: 60px; padding-right: 60px;" id="BorkenPadding">
+			
+		</div>
+	</div>
+
+	
+	
+				</div>
+			</div>
+		</div>
+	
+		<div class="wk_notification_container hidden-xs hidden-sm hidden-md" style="width: 400px; position: fixed; bottom: 50px; right: 30px; z-index: 999999;" id="id4a">
+	
+</div>
+		<div class="wk_notification_container visible-xs visible-sm visible-md" style="position: fixed; bottom: 50px; right: 10px; z-index: 999999;" id="id4b">
+	
+</div>
+	
+	
+	<div class="footer-tannen"></div>
+	<div class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="row-ehr">
+						<div class="columns">
+							<h4 class="footer-hl"><strong>Kontakt</strong></h4>
+							<div class="finfo">
+								<p>Gemeinde Ehringshausen</p>
+								<p>Rathausstraße 1</p>
+								<p>35630 Ehringshausen</p>
+							</div>
+							<div class="finfo">
+								<p>06443 609-0</p>
+								<p>06443 609-12</p>
+								<p><a href="mailto:info@ehringshausen.de" target="_blank">info@ehringshausen.de</a></p>
+							</div>
+						</div>
+						<div class="columns">
+							<h4 class="footer-hl"><strong>Quicklinks</strong></h4>
+							<a style="color: #fff" href="./Formulare?6-1.-Impressum" class="btn  btn-link">
+            Impressum
+        </a>
+						</div>
+						<div class="columns">
+							<img class="img-responsive footer-wappen" src="../pubres/wappen-ehringshausen.png" alt="Wappen Ehringshausen">
+						</div>	
+					</div>			
+				
+					<div class="pull-right">
+						<div>powered by webKITA 3.27.3 <a href="https://www.webkita.de" target="_blank">www.webkita.de</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body></html></div>
+<div class="slide" id="slide3"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="../bs-3.4.1/css/bootstrap.min-ver-7F89537EAF606BFF49F5CC1A7C24DBCA.css">
+<script type="text/javascript" src="../wicket/resource/org.apache.wicket.resource.JQueryResourceReference/jquery/jquery-3.4.1-ver-D19AFC7779BBA20E96683BE58B330F62.js"></script>
+<script type="text/javascript" src="../wicket/resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/res/js/wicket-ajax-jquery-ver-3A8C326A8436172FC95523D517EBC88B.js"></script>
+<script type="text/javascript" id="wicket-ajax-base-url">
+/*<![CDATA[*/
+Wicket.Ajax.baseUrl="infoportal/Satzungen_Gebuehren?7";
+/*]]>*/
+</script>
+<link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css">
+
+<title>webKITA - Online</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="de">
+<meta http-equiv="Cache-Control" content="no-cache, no-store">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="shortcut icon" type="image/x-icon">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="charset" content="UTF-8">
+<script type="text/javascript" id="bootstrap-js" src="../bs-3.4.1/js/bootstrap.min-ver-2F34B630FFE30BA2FF2B91E3F3C322A1.js"></script>
+<link rel="stylesheet" type="text/css" href="../wicket/resource/de.webkita.pub.basebs.ExternBsBasePage/ExternBsBasePage-ver-688D79FBC8C1C6845012F6DF21137733.css">
+<link rel="stylesheet" type="text/css" href="../pubres/base-3.27.3.css" media="screen, projection">
+<link rel="stylesheet" type="text/css" href="../pubres/print-3.27.3.css" media="print">
+<link rel="stylesheet" type="text/css" href="../bs-3.4.1/css/bootstrap.min-ver-7F89537EAF606BFF49F5CC1A7C24DBCA.css" media="print">
+<script type="text/javascript" src="../js/focusHandler.js"></script>
+<script type="text/javascript" src="../js/offcanvas.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+Wicket.Event.add(window, "domready", function(event) { 
+Wicket.Ajax.ajax({"u":"./Satzungen_Gebuehren?7-1.0-DeleteBenutzerModal-dialog-footer-buttons-0-button","m":"POST","c":"id4e","f":"id4d","sc":"DeleteBenutzerModal:dialog:footer:buttons:0:button","e":"click"});;
+Wicket.Ajax.ajax({"u":"./Satzungen_Gebuehren?7-1.0-DeleteBenutzerModal-dialog-footer-buttons-1-button","c":"id50","bsh":[function(attrs, jqXHR, settings){document.location.hash='id4f';$('#id4f').modal('hide');}],"e":"click"});;
+var id4ctogglePwElement = document.getElementById('id4ctogglePw');
+if (id4ctogglePwElement) {id4ctogglePwElement.addEventListener('change', function (e) {
+    const passwordInput = document.getElementById('id4c');
+    if (e.target.checked) {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
+});};
+$('#id4f').modal({keyboard:true, show:false});
+Wicket.Ajax.ajax({"u":"./Satzungen_Gebuehren?7-1.0-SearchPanel-Form-SearchSubmit","m":"POST","c":"id52","f":"id51","sc":"SearchSubmit","e":"click","pd":true});;
+Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
+;});
+/*]]>*/
+</script>
+</head>
+
+<body class="wk_body_style">
+
+	<nav class="navbar navbar-fixed-top" style="padding-top: 5px; background: #fff;">
+		<div class="container">
+			<div class="wk_navbar_background">
+				<div class="navbar-header">
+					<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="../start">
+						<img class="img-responsive header-logo" src="../pubres/logo-ehringshausen.png" alt="Logo Ehringshausen">
+					</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="../suche">Betreuungsangebot</a>
+						</li>
+						<li class="active">
+							<a href="../infoportal">Infoportal</a>
+						</li>
+						
+						
+			
+						<li id="id53"><a href="../sb/login">Login</a></li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div id="id4f" class="modal" tabindex="-1" data-backdrop="false" role="dialog" aria-labelledby="id54" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="id55">×</button>
+                        <h4 class="modal-title" id="id54">Elternkonto löschen</h4>
+                    </div>
+                    <div class="modal-body">
+                        
+		
+		<br>
+		<div style="margin-bottom: 20px; max-height: 400px; overflow:auto;" id="id56">Sind Sie sicher, dass Sie Ihr Benutzerkonto löschen möchten? Alle Ihre abgegebenen Vormerkungen und erhaltenen Platzangebote werden gelöscht!</div>
+		<form id="id4d" method="post" action="./Satzungen_Gebuehren?7-1.-DeleteBenutzerModal-Form"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden" class="hidden-fields"><input type="text" tabindex="-1" autocomplete="off"><input type="submit" tabindex="-1" name="DeleteBenutzerModal:dialog:footer:buttons:0:button" onclick=" var b=document.getElementById('id4e'); if (b!=null&amp;&amp;b.onclick!=null&amp;&amp;typeof(b.onclick) != 'undefined') {  var r = Wicket.bind(b.onclick, b)(); if (r != false) b.click(); } else { b.click(); };  return false;"></div>
+			<div class="row">
+				<div class="col-xs-12"><div class=" form-group required">
+            <label class="control-label" for="id4c">Bitte geben Sie zur Überprüfung Ihr Benutzerkennwort ein</label>
+            
+            
+
+            <div class="input-group"><input class="form-control" type="password" placeholder="" value="" name="Password:formgroup:formgroup_body:Password" id="id4c"><span class="input-group-addon"><input type="checkbox" id="id4ctogglePw"> Zeigen</span></div>
+            
+             <div class="row">
+            	<div class="col-xs-12">
+            		
+		            
+		            
+	            </div>
+            </div>
+
+            
+            
+        </div></div>
+			</div>
+		</form>
+	
+                    </div>
+                    <div class="modal-footer">
+                        
+                            <button type="button" id="id4e" class="btn  btn-danger">
+            <i class="glyphicon glyphicon-remove"></i>&nbsp;Benutzerkonto löschen
+        </button>
+                        
+                            <button type="button" id="id50" data-dismiss="modal" class="btn  btn-default">Abbrechen</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+	<div id="id57" style="display:none" data-wicket-placeholder=""></div>
+	<div class="col-xs-12" style="color: red;" id="id58">
+            
+        </div>
+	
+		<div class="container wk_container_formatter">
+			
+
+
+	<noscript>
+		<div class="alert alert-warning">
+			<div class="row">
+				<div class="col col-xs-12 col-sm-2 text-center">
+					<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"
+						style="font-size: 50px;"></span>
+				</div>
+				<div class="col col-xs-12 col-sm-10">
+					<strong>Ist JavaScript in Ihrem Browser deaktiviert?</strong>&nbsp;<span>Da
+						viele Funktionen von Webkita auf JavaScript basieren, können Sie
+						die Anwendung nicht in vollem Umfang nutzen und haben eventuell
+						Probleme beim Anzeigen einiger Seiten. Hier finden Sie kurze
+						Anleitungen für die jeweiligen Browser, wie Sie JavaScript in
+						Ihrem Browser aktivieren können.</span>
+				</div>
+			</div>
+			<div class="row">
+			<div class="col col-xs-12 text-center">
+				<a href="../nojavascript" class="btn  btn-lg btn-link">
+            <i class="glyphicon glyphicon-arrow-right"></i>&nbsp;Anleitung: JavaScript aktivieren
+        </a>
+			</div>
+			</div>
+		</div>
+	</noscript>
+
+
+
+		</div>
+		
+		
+		<div class="container infoportal">
+			<div class="row">
+				<div class="col-xs-12" style="padding-left: 60px; padding-right: 60px;" id="BorkenPadding">
+					<div class="pull-right">
+
+	<form id="id51" method="post" action="./Satzungen_Gebuehren?7-1.-SearchPanel-Form" class="form-inline">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Infoportal durchsuchen" value="" name="SearchInput">
+
+			<div class="input-group-btn">
+				<button name="SearchSubmit" id="id52" class="btn  btn-primary">
+            <i class="glyphicon glyphicon-search"></i>
+        </button>
+				<!-- <button wicket:id="Reset"></button> -->
+			</div>
+		</div>
+	<input type="hidden" value="Zgv12sFK5pk922OfdWlJP7gU_QU" name="csrfToken"></form>
+
+</div>
+					<a class="pull-right btn  btn-link" href="../infoportal-faq">
+            FAQ
+        </a> <a class="pull-right btn  btn-link" href="../infoportal-uebersicht">
+            Artikelübersicht
+        </a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					
+		
+	
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 ">
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="BorkenPadding" class="jumbotron">
+					<div class="row">
+						<a href="./Satzungen_Gebuehren?7-1.-Panel-jumbotron-OberArtikelButton" class="btn  btn-default">
+            <i class="glyphicon glyphicon-arrow-up"></i>&nbsp;Zum Oberartikel
+        </a>
+					</div>
+					
+	<div class="clearfix">
+		<div class="col-xs-12" id="BorkenPadding">
+			<h1>Gebühren und Satzungen</h1>
+			<p></p><p>Die Betreuungsgebühren und Verpflegungsentgelte werden für alle gemeindlichen Einrichtungen einheitlich durch die&nbsp;</p>
+<p><em>Kostenbeitragssatzung zur Satzung der Gemeinde Ehringshausen über die Benutzung der Tageseinrichtungen für Kinder (Kostenbeitragssatzung, KBS)</em></p>
+<p>geregelt. Sie gestalten sich derzeit wie folgt:&nbsp;&nbsp;</p>
+<table border="0"><colgroup><col><col></colgroup><tbody><tr style="background-color:#e6e6e6"><td class="xl63" width="167" height="40">für Kinder mit folgender Betreuungszeit</td><td style="width:150px;text-align:center">ab 01.01.2023</td><td style="width:150px;text-align:center">ab 01.01.2024</td><td style="width:150px;text-align:center">ab 01.01.2025</td></tr><tr><td class="xl65" height="20">07:00 Uhr - 13:00 Uhr</td><td style="width:150px;text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 147,00 €</td><td style="width:150px;text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150,00 €</td><td style="width:150px;text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 153,00 €</td></tr><tr><td class="xl65" height="20">07:00 Uhr - 16:30 Uhr</td><td style="width:150px;text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 232,75 €</td><td style="width:150px;text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 237,50 €</td><td style="width:150px;text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 242,25 €</td></tr></tbody></table>
+<p>&nbsp;</p>
+<p>Eine Betreuungsstunde kostet somit:&nbsp;</p>
+<table border="0"><colgroup><col></colgroup><tbody><tr style="background-color:#e6e6e6"><td style="width:150px;text-align:center">ab 01.01.2023</td><td style="width:150px;text-align:center">ab 01.01.2024</td><td style="width:150px;text-align:center">ab 01.01.2025</td></tr><tr><td style="width:150px;text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 24,50 €</td><td style="width:150px;text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25,00 €</td><td style="width:150px;text-align:center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 25,50 €</td></tr></tbody></table>
+<p>&nbsp;</p>
+<p>Besuchen gleichzeitig mehrere Kinder einer Familie die Kindertagesstätte, wird für das Kind mit dem höheren Kostenbeitrag der volle Beitrag erhoben.</p>
+<p>Weitere Kinder der Familie sind vollständig vom Kostenbeitrag befreit.</p>
+<p>Ein Kostenbeitrag für Kinder ab dem vollendeten dritten Lebensjahr bis zum Schuleintritt wird nicht erhoben soweit ein Betreuungszeitraum im Umfang von bis zu sechs Stunden täglich gebucht wurde.</p>
+<p>Für die über sechs Stunden hinaus gehende Betreuungszeit wird ein anteiliger Kostenbeitrag erhoben.</p>
+<p>Für die Mittagsverpflegung wird ein pauschaler Kostenbeitrag von 80,00 € erhoben.</p>
+<p><br>Ebenfalls können Einzelessen für 4,50 € pro Mahlzeit hinzugebucht werden.</p>
+<p>&nbsp;</p><p></p>
+		</div>
+	</div>
+	<div class="col-md-12" style="margin-bottom: 20px;">
+		<fieldset>
+			<legend>Anhänge</legend>
+			<div class="col-xs-12">
+				<a class="btn btn-link" href="./Satzungen_Gebuehren?7-1.-Panel-jumbotron-Article-DokumentContainer-ListView-0-ListItem">
+					Kostenbeitragssatzung (.pdf)
+				</a>
+			</div><div class="col-xs-12">
+				<a class="btn btn-link" href="./Satzungen_Gebuehren?7-1.-Panel-jumbotron-Article-DokumentContainer-ListView-1-ListItem">
+					Satzung über die Benutzung der Tageseinrichtungen für Kinder in der Gemeinde Ehringshausen (.pdf)
+				</a>
+			</div>
+		</fieldset>
+	</div>
+
+				</div>
+			</div>
+		</div>
+		
+	<div class="row">
+		<div class="col-md-12" style="padding-left: 60px; padding-right: 60px;" id="BorkenPadding">
+			
+		</div>
+	</div>
+
+	
+	
+				</div>
+			</div>
+		</div>
+	
+		<div class="wk_notification_container hidden-xs hidden-sm hidden-md" style="width: 400px; position: fixed; bottom: 50px; right: 30px; z-index: 999999;" id="id59">
+	
+</div>
+		<div class="wk_notification_container visible-xs visible-sm visible-md" style="position: fixed; bottom: 50px; right: 10px; z-index: 999999;" id="id5a">
+	
+</div>
+	
+	
+	<div class="footer-tannen"></div>
+	<div class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="row-ehr">
+						<div class="columns">
+							<h4 class="footer-hl"><strong>Kontakt</strong></h4>
+							<div class="finfo">
+								<p>Gemeinde Ehringshausen</p>
+								<p>Rathausstraße 1</p>
+								<p>35630 Ehringshausen</p>
+							</div>
+							<div class="finfo">
+								<p>06443 609-0</p>
+								<p>06443 609-12</p>
+								<p><a href="mailto:info@ehringshausen.de" target="_blank">info@ehringshausen.de</a></p>
+							</div>
+						</div>
+						<div class="columns">
+							<h4 class="footer-hl"><strong>Quicklinks</strong></h4>
+							<a style="color: #fff" href="./Satzungen_Gebuehren?7-1.-Impressum" class="btn  btn-link">
+            Impressum
+        </a>
+						</div>
+						<div class="columns">
+							<img class="img-responsive footer-wappen" src="../pubres/wappen-ehringshausen.png" alt="Wappen Ehringshausen">
+						</div>	
+					</div>			
+				
+					<div class="pull-right">
+						<div>powered by webKITA 3.27.3 <a href="https://www.webkita.de" target="_blank">www.webkita.de</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body></html></div>
+<div class="slide" id="slide4"><html xmlns="http://www.w3.org/1999/xhtml"><head><link rel="stylesheet" type="text/css" href="../bs-3.4.1/css/bootstrap.min-ver-7F89537EAF606BFF49F5CC1A7C24DBCA.css">
+<script type="text/javascript" src="../wicket/resource/org.apache.wicket.resource.JQueryResourceReference/jquery/jquery-3.4.1-ver-D19AFC7779BBA20E96683BE58B330F62.js"></script>
+<script type="text/javascript" src="../wicket/resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/res/js/wicket-ajax-jquery-ver-3A8C326A8436172FC95523D517EBC88B.js"></script>
+<script type="text/javascript" id="wicket-ajax-base-url">
+/*<![CDATA[*/
+Wicket.Ajax.baseUrl="infoportal/Leitbild?8";
+/*]]>*/
+</script>
+<link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css">
+
+<title>webKITA - Online</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-language" content="de">
+<meta http-equiv="Cache-Control" content="no-cache, no-store">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="shortcut icon" type="image/x-icon">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="charset" content="UTF-8">
+<script type="text/javascript" id="bootstrap-js" src="../bs-3.4.1/js/bootstrap.min-ver-2F34B630FFE30BA2FF2B91E3F3C322A1.js"></script>
+<link rel="stylesheet" type="text/css" href="../wicket/resource/de.webkita.pub.basebs.ExternBsBasePage/ExternBsBasePage-ver-688D79FBC8C1C6845012F6DF21137733.css">
+<link rel="stylesheet" type="text/css" href="../pubres/base-3.27.3.css" media="screen, projection">
+<link rel="stylesheet" type="text/css" href="../pubres/print-3.27.3.css" media="print">
+<link rel="stylesheet" type="text/css" href="../bs-3.4.1/css/bootstrap.min-ver-7F89537EAF606BFF49F5CC1A7C24DBCA.css" media="print">
+<script type="text/javascript" src="../js/focusHandler.js"></script>
+<script type="text/javascript" src="../js/offcanvas.js"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+Wicket.Event.add(window, "domready", function(event) { 
+Wicket.Ajax.ajax({"u":"./Leitbild?8-1.0-DeleteBenutzerModal-dialog-footer-buttons-0-button","m":"POST","c":"id5d","f":"id5c","sc":"DeleteBenutzerModal:dialog:footer:buttons:0:button","e":"click"});;
+Wicket.Ajax.ajax({"u":"./Leitbild?8-1.0-DeleteBenutzerModal-dialog-footer-buttons-1-button","c":"id5f","bsh":[function(attrs, jqXHR, settings){document.location.hash='id5e';$('#id5e').modal('hide');}],"e":"click"});;
+var id5btogglePwElement = document.getElementById('id5btogglePw');
+if (id5btogglePwElement) {id5btogglePwElement.addEventListener('change', function (e) {
+    const passwordInput = document.getElementById('id5b');
+    if (e.target.checked) {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
+});};
+$('#id5e').modal({keyboard:true, show:false});
+Wicket.Ajax.ajax({"u":"./Leitbild?8-1.0-SearchPanel-Form-SearchSubmit","m":"POST","c":"id61","f":"id60","sc":"SearchSubmit","e":"click","pd":true});;
+Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
+;});
+/*]]>*/
+</script>
+</head>
+
+<body class="wk_body_style">
+
+	<nav class="navbar navbar-fixed-top" style="padding-top: 5px; background: #fff;">
+		<div class="container">
+			<div class="wk_navbar_background">
+				<div class="navbar-header">
+					<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="../start">
+						<img class="img-responsive header-logo" src="../pubres/logo-ehringshausen.png" alt="Logo Ehringshausen">
+					</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="../suche">Betreuungsangebot</a>
+						</li>
+						<li class="active">
+							<a href="../infoportal">Infoportal</a>
+						</li>
+						
+						
+			
+						<li id="id62"><a href="../sb/login">Login</a></li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div id="id5e" class="modal" tabindex="-1" data-backdrop="false" role="dialog" aria-labelledby="id63" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="id64">×</button>
+                        <h4 class="modal-title" id="id63">Elternkonto löschen</h4>
+                    </div>
+                    <div class="modal-body">
+                        
+		
+		<br>
+		<div style="margin-bottom: 20px; max-height: 400px; overflow:auto;" id="id65">Sind Sie sicher, dass Sie Ihr Benutzerkonto löschen möchten? Alle Ihre abgegebenen Vormerkungen und erhaltenen Platzangebote werden gelöscht!</div>
+		<form id="id5c" method="post" action="./Leitbild?8-1.-DeleteBenutzerModal-Form"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden" class="hidden-fields"><input type="text" tabindex="-1" autocomplete="off"><input type="submit" tabindex="-1" name="DeleteBenutzerModal:dialog:footer:buttons:0:button" onclick=" var b=document.getElementById('id5d'); if (b!=null&amp;&amp;b.onclick!=null&amp;&amp;typeof(b.onclick) != 'undefined') {  var r = Wicket.bind(b.onclick, b)(); if (r != false) b.click(); } else { b.click(); };  return false;"></div>
+			<div class="row">
+				<div class="col-xs-12"><div class=" form-group required">
+            <label class="control-label" for="id5b">Bitte geben Sie zur Überprüfung Ihr Benutzerkennwort ein</label>
+            
+            
+
+            <div class="input-group"><input class="form-control" type="password" placeholder="" value="" name="Password:formgroup:formgroup_body:Password" id="id5b"><span class="input-group-addon"><input type="checkbox" id="id5btogglePw"> Zeigen</span></div>
+            
+             <div class="row">
+            	<div class="col-xs-12">
+            		
+		            
+		            
+	            </div>
+            </div>
+
+            
+            
+        </div></div>
+			</div>
+		</form>
+	
+                    </div>
+                    <div class="modal-footer">
+                        
+                            <button type="button" id="id5d" class="btn  btn-danger">
+            <i class="glyphicon glyphicon-remove"></i>&nbsp;Benutzerkonto löschen
+        </button>
+                        
+                            <button type="button" id="id5f" data-dismiss="modal" class="btn  btn-default">Abbrechen</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+	<div id="id66" style="display:none" data-wicket-placeholder=""></div>
+	<div class="col-xs-12" style="color: red;" id="id67">
+            
+        </div>
+	
+		<div class="container wk_container_formatter">
+			
+
+
+	<noscript>
+		<div class="alert alert-warning">
+			<div class="row">
+				<div class="col col-xs-12 col-sm-2 text-center">
+					<span class="glyphicon glyphicon-warning-sign" aria-hidden="true"
+						style="font-size: 50px;"></span>
+				</div>
+				<div class="col col-xs-12 col-sm-10">
+					<strong>Ist JavaScript in Ihrem Browser deaktiviert?</strong>&nbsp;<span>Da
+						viele Funktionen von Webkita auf JavaScript basieren, können Sie
+						die Anwendung nicht in vollem Umfang nutzen und haben eventuell
+						Probleme beim Anzeigen einiger Seiten. Hier finden Sie kurze
+						Anleitungen für die jeweiligen Browser, wie Sie JavaScript in
+						Ihrem Browser aktivieren können.</span>
+				</div>
+			</div>
+			<div class="row">
+			<div class="col col-xs-12 text-center">
+				<a href="../nojavascript" class="btn  btn-lg btn-link">
+            <i class="glyphicon glyphicon-arrow-right"></i>&nbsp;Anleitung: JavaScript aktivieren
+        </a>
+			</div>
+			</div>
+		</div>
+	</noscript>
+
+
+
+		</div>
+		
+		
+		<div class="container infoportal">
+			<div class="row">
+				<div class="col-xs-12" style="padding-left: 60px; padding-right: 60px;" id="BorkenPadding">
+					<div class="pull-right">
+
+	<form id="id60" method="post" action="./Leitbild?8-1.-SearchPanel-Form" class="form-inline">
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="Infoportal durchsuchen" value="" name="SearchInput">
+
+			<div class="input-group-btn">
+				<button name="SearchSubmit" id="id61" class="btn  btn-primary">
+            <i class="glyphicon glyphicon-search"></i>
+        </button>
+				<!-- <button wicket:id="Reset"></button> -->
+			</div>
+		</div>
+	<input type="hidden" value="Zgv12sFK5pk922OfdWlJP7gU_QU" name="csrfToken"></form>
+
+</div>
+					<a class="pull-right btn  btn-link" href="../infoportal-faq">
+            FAQ
+        </a> <a class="pull-right btn  btn-link" href="../infoportal-uebersicht">
+            Artikelübersicht
+        </a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					
+		
+	
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 ">
+				
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="BorkenPadding" class="jumbotron">
+					<div class="row">
+						<a href="./Leitbild?8-1.-Panel-jumbotron-OberArtikelButton" class="btn  btn-default">
+            <i class="glyphicon glyphicon-arrow-up"></i>&nbsp;Zum Oberartikel
+        </a>
+					</div>
+					
+	<div class="clearfix">
+		<div class="col-xs-12" id="BorkenPadding">
+			<h1>Unser Leitbild</h1>
+			<p></p><p>&nbsp;</p>
+<p>&nbsp;</p>
+<h4 style="text-align:center"><strong><em><span style="color:#3366ff">„Besonders wichtige Schlüsselerfahrungen </span></em></strong></h4>
+<h4 style="text-align:center"><strong><em><span style="color:#3366ff">erlebt das Kind beim Eintritt in eine </span></em></strong></h4>
+<h4 style="text-align:center"><strong><em><span style="color:#3366ff">Kindertageseinrichtung, die sich zugleich als </span></em></strong></h4>
+<h4 style="text-align:center"><strong><em><span style="color:#3366ff">Modell und Spiegelbild einer heterogenen Gesellschaftsgruppe begreifen lässt. </span></em></strong></h4>
+<h4 style="text-align:center"><strong><em><span style="color:#3366ff">Das Kind&nbsp;</span></em></strong><strong style="font-size:1.17em"><em><span style="color:#3366ff">erfährt sich als Mitglied dieser Gruppe in der</span></em></strong></h4>
+<h4 style="text-align:center"><strong><em><span style="color:#3366ff">soziale, wirtschaftliche und kulturelle Schlüsselprozesse erlebt, </span></em></strong></h4>
+<h4 style="text-align:center"><strong><em><span style="color:#3366ff">verstanden und&nbsp;</span></em></strong><strong style="font-size:1.17em"><em><span style="color:#3366ff">erlernt werden können.“</span></em></strong></h4><p></p>
+		</div>
+	</div>
+	<div class="col-md-12" style="margin-bottom: 20px;">
+		<fieldset>
+			<legend>Anhänge</legend>
+			<div class="col-xs-12">
+				<a class="btn btn-link" href="./Leitbild?8-1.-Panel-jumbotron-Article-DokumentContainer-ListView-0-ListItem">
+					Lesen Sie hier unser komplettes Leitbild (.pdf)
+				</a>
+			</div>
+		</fieldset>
+	</div>
+
+				</div>
+			</div>
+		</div>
+		
+	<div class="row">
+		<div class="col-md-12" style="padding-left: 60px; padding-right: 60px;" id="BorkenPadding">
+			
+		</div>
+	</div>
+
+	
+	
+				</div>
+			</div>
+		</div>
+	
+		<div class="wk_notification_container hidden-xs hidden-sm hidden-md" style="width: 400px; position: fixed; bottom: 50px; right: 30px; z-index: 999999;" id="id68">
+	
+</div>
+		<div class="wk_notification_container visible-xs visible-sm visible-md" style="position: fixed; bottom: 50px; right: 10px; z-index: 999999;" id="id69">
+	
+</div>
+	
+	
+	<div class="footer-tannen"></div>
+	<div class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="row-ehr">
+						<div class="columns">
+							<h4 class="footer-hl"><strong>Kontakt</strong></h4>
+							<div class="finfo">
+								<p>Gemeinde Ehringshausen</p>
+								<p>Rathausstraße 1</p>
+								<p>35630 Ehringshausen</p>
+							</div>
+							<div class="finfo">
+								<p>06443 609-0</p>
+								<p>06443 609-12</p>
+								<p><a href="mailto:info@ehringshausen.de" target="_blank">info@ehringshausen.de</a></p>
+							</div>
+						</div>
+						<div class="columns">
+							<h4 class="footer-hl"><strong>Quicklinks</strong></h4>
+							<a style="color: #fff" href="./Leitbild?8-1.-Impressum" class="btn  btn-link">
+            Impressum
+        </a>
+						</div>
+						<div class="columns">
+							<img class="img-responsive footer-wappen" src="../pubres/wappen-ehringshausen.png" alt="Wappen Ehringshausen">
+						</div>	
+					</div>			
+				
+					<div class="pull-right">
+						<div>powered by webKITA 3.27.3 <a href="https://www.webkita.de" target="_blank">www.webkita.de</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body></html></div>
 
 <script>
 let index = 0;
@@ -40,8 +1790,8 @@ function showNext() {
 }
 
 if (slides.length > 0) {
-  showSlide(0); // Erste Seite anzeigen
-  setInterval(showNext, 10000); // alle 10 Sek wechseln
+  showSlide(0);
+  setInterval(showNext, 10000);
 }
 </script>
 </body>
