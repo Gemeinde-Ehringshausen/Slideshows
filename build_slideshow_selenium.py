@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 import time
 import os
 
-BASE_URL = "https://www.webkita.de/ehringshausen/infoportal/"
+BASE_URL = "https://www.webkita.de/ehringshausen/infoportal/Info_Einrichtungen?6"
 
 # -----------------------------
 # Headless Chrome konfigurieren
