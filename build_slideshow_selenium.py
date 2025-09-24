@@ -6,7 +6,16 @@ from bs4 import BeautifulSoup
 import time
 import os
 
-BASE_URL = "https://www.webkita.de/ehringshausen/infoportal/Info_Einrichtungen?6"
+# -----------------------------
+# Manuell einzutragende URLs
+# -----------------------------
+links = [
+    "https://www.webkita.de/ehringshausen/infoportal/anleitung",
+    "https://www.webkita.de/ehringshausen/infoportal/Info_Einrichtungen",
+    "https://www.webkita.de/ehringshausen/infoportal/Formulare",
+    "https://www.webkita.de/ehringshausen/infoportal/Satzungen_Gebuehren",
+    "https://www.webkita.de/ehringshausen/infoportal/Leitbild"
+]
 
 # -----------------------------
 # Headless Chrome konfigurieren
@@ -17,26 +26,6 @@ options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 options.add_argument("--window-size=1920,1080")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-
-# -----------------------------
-# Alle Unterseiten automatisch sammeln
-# -----------------------------
-print("🔎 Lade Startseite:", BASE_URL)
-driver.get(BASE_URL)
-time.sleep(2)  # JS warten lassen
-
-# alle <a>-Links aus gerendertem DOM
-elems = driver.find_elements(By.TAG_NAME, "a")
-links = []
-for e in elems:
-    href = e.get_attribute("href")
-    if href and "/infoportal/" in href:
-        if href not in links:
-            links.append(href)
-
-print(f"📌 Gefundene Unterseiten: {len(links)}")
-for l in links:
-    print(" -", l)
 
 # -----------------------------
 # Inhalte abrufen und Kopf/Fuß entfernen
@@ -127,8 +116,8 @@ color:#000;
 """
 
 for i, content in enumerate(contents):
-    html_template += f'<div class="slide" id="slide{i}">{content}</div>'
-
+    html_template += f'<div class="slide" id="slide{i}">{content}</div>
+'
 
 html_template += """
 <script>
