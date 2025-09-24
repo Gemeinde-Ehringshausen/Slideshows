@@ -1,0 +1,29 @@
+name: Build Slideshow Selenium
+
+on:
+  workflow_dispatch:      # manuell starten
+  schedule:
+    - cron: "0 6 * * *"  # täglich um 08:00 DE-Zeit
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget unzip xvfb libxi6 libgconf-2-4
+          pip install selenium webdriver-manager beautifulsoup4
+
+      - name: Run Selenium Script
+        run: python build_slideshow_selenium.py
+
+      - name: Commit Slideshow
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add slideshow.html
+          git commit -m "Automatisch aktualisierte Slideshow (Selenium)" || echo "Keine Änderungen"
+          git push
