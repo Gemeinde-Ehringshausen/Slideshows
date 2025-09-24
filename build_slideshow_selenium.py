@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
+from bs4 import BeautifulSoup
 import time
 import os
 
@@ -25,7 +26,7 @@ print("🔎 Lade Startseite:", BASE_URL)
 driver.get(BASE_URL)
 time.sleep(2)  # JS warten lassen
 
-# alle <a>-Links aus dem gerenderten DOM
+# alle <a>-Links aus gerendertem DOM
 elems = driver.find_elements(By.TAG_NAME, "a")
 links = []
 
@@ -40,7 +41,7 @@ for l in links:
     print(" -", l)
 
 # -----------------------------
-# Inhalte abrufen
+# Inhalte abrufen und Kopf/Fuß entfernen
 # -----------------------------
 contents = []
 
@@ -53,10 +54,18 @@ for url in links:
         try:
             element = driver.find_element(By.CSS_SELECTOR, "main")
             html = element.get_attribute("outerHTML")
+
+            # Kopf/Fuß entfernen
+            soup = BeautifulSoup(html, "html.parser")
+            for tag in soup.find_all(["header", "footer", "nav"]):
+                tag.decompose()
+            html = str(soup)
+
             contents.append(html)
             print(f"✅ Inhalt aus <main> geladen ({len(html)} Zeichen)")
+
         except Exception as e:
-            print(f"⚠ Kein <main> gefunden, nutze komplette Seite. Fehler: {e}")
+            print(f"⚠ Kein <main> gefunden, gesamte Seite genommen. Fehler: {e}")
             contents.append(driver.page_source)
 
     except Exception as e:
