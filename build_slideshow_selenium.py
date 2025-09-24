@@ -93,47 +93,105 @@ html_template = """<!DOCTYPE html>
 <meta charset="UTF-8">
 <title>Infoportal Slideshow</title>
 <style>
+/* Grundlayout */
 body, html {
-margin:0; padding:0;
-width:100%; height:100%;
-background:#000;
-font-family:sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    font-family: sans-serif;
 }
+
+/* Slideshow-Styling */
 .slide {
-display:none;
-width:100%;
-height:100%;
-box-sizing:border-box;
-padding:1rem;
-background:#fff;
-overflow:auto;
-color:#000;
+    display: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    background: #fff;
+    overflow: auto;
+    color: #000;
 }
-.slide.active { display:block; }
+
+.slide.active {
+    display: block;
+}
+
+/* Fortschrittsbalken */
+.progress-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3); /* Hintergrund des Containers */
+    z-index: 1000; /* Immer sichtbar */
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: #00ff00; /* Farbe des Fortschrittsbalkens */
+    transition: width linear;
+}
 </style>
 </head>
 <body>
+
+<!-- Fortschrittsbalken -->
+<div class="progress-bar-container">
+    <div class="progress-bar" id="progress-bar"></div>
+</div>
+
+<!-- Slideshow-Inhalte -->
 """
 
+# Inhalte der Slides hinzufügen
 for i, content in enumerate(contents):
-    html_template += f'<div class="slide" id="slide{i}">{content}</div>'
+    html_template += f'<div class="slide" id="slide{i}">{content}</div>
+'
 
-
+# JavaScript für die Slideshow und den Fortschrittsbalken
 html_template += """
 <script>
+/* JavaScript für die Slideshow und den Fortschrittsbalken */
+
+// Variablen für die Slideshow
 let index = 0;
 const slides = document.querySelectorAll('.slide');
+const progressBar = document.getElementById('progress-bar');
+const slideDuration = 10000; // Dauer pro Slide in Millisekunden (10 Sekunden)
+
+// Funktion, um den Fortschrittsbalken zu animieren
+function resetProgressBar() {
+    progressBar.style.transition = 'none'; // Keine Animation für den Reset
+    progressBar.style.width = '0%'; // Zurücksetzen
+    setTimeout(() => {
+        progressBar.style.transition = `width ${slideDuration}ms linear`; // Animation aktivieren
+        progressBar.style.width = '100%'; // Fortschrittsbalken füllen
+    }, 50); // Kleine Verzögerung, um den Reset sichtbar zu machen
+}
+
+// Funktion, um eine Slide anzuzeigen
 function showSlide(i) {
-    slides.forEach(s => s.classList.remove('active'));
+    slides.forEach(slide => slide.classList.remove('active'));
     slides[i].classList.add('active');
 }
+
+// Funktion, um zur nächsten Slide zu wechseln
 function showNext() {
-    index = (index + 1) % slides.length;
+    index = (index + 1) % slides.length; // Nächste Slide oder zurück zur ersten
     showSlide(index);
+    resetProgressBar(); // Fortschrittsbalken zurücksetzen und starten
 }
+
+// Slideshow starten
 if (slides.length > 0) {
-    showSlide(0);
-    setInterval(showNext, 10000);
+    showSlide(0); // Erste Slide anzeigen
+    resetProgressBar(); // Fortschrittsbalken starten
+    setInterval(showNext, slideDuration); // Automatischer Wechsel nach der festgelegten Dauer
 }
 </script>
 </body>
