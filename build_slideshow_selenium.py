@@ -53,7 +53,7 @@ html_template = """<!DOCTYPE html>
 body, html {
   margin:0; padding:0;
   width:100vw; height:100vh;
-  background:black;
+  background:white;
   overflow:hidden;
   font-family:sans-serif;
 }
