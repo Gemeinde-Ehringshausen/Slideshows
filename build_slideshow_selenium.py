@@ -2,7 +2,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
-from bs4 import BeautifulSoup
 import time
 import os
 
@@ -20,24 +19,23 @@ options.add_argument("--window-size=1920,1080")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 # -----------------------------
-# Alle Links aus dem Infoportal sammeln
+# Alle Unterseiten automatisch sammeln
 # -----------------------------
+print("🔎 Lade Startseite:", BASE_URL)
 driver.get(BASE_URL)
-time.sleep(2)
+time.sleep(2)  # JS warten lassen
 
-soup = BeautifulSoup(driver.page_source, "html.parser")
-
+# alle <a>-Links aus dem gerenderten DOM
+elems = driver.find_elements(By.TAG_NAME, "a")
 links = []
-for a in soup.find_all("a", href=True):
-    href = a["href"]
-    # nur interne Links zum Infoportal mitnehmen
-    if href.startswith(BASE_URL) or href.startswith("anleitung") or href.startswith("?"):
-        if not href.startswith("http"):  # relative Links ergänzen
-            href = BASE_URL + href.lstrip("/")
+
+for e in elems:
+    href = e.get_attribute("href")
+    if href and "/infoportal/" in href:
         if href not in links:
             links.append(href)
 
-print("📌 Gefundene Unterseiten:", len(links))
+print(f"📌 Gefundene Unterseiten: {len(links)}")
 for l in links:
     print(" -", l)
 
@@ -48,19 +46,21 @@ contents = []
 
 for url in links:
     try:
+        print(f"➡ Lade URL: {url}")
         driver.get(url)
-        time.sleep(2)  # warten bis JS geladen hat
+        time.sleep(2)  # JS warten lassen
 
         try:
-            element = driver.find_element(By.CSS_SELECTOR, "main")  # nur Hauptbereich
+            element = driver.find_element(By.CSS_SELECTOR, "main")
             html = element.get_attribute("outerHTML")
             contents.append(html)
-            print(f"✅ Inhalt aus <main> geladen: {url}")
-        except:
-            print(f"⚠ Kein <main> gefunden, gesamte Seite genommen: {url}")
+            print(f"✅ Inhalt aus <main> geladen ({len(html)} Zeichen)")
+        except Exception as e:
+            print(f"⚠ Kein <main> gefunden, nutze komplette Seite. Fehler: {e}")
             contents.append(driver.page_source)
+
     except Exception as e:
-        print("❌ Fehler bei:", url, e)
+        print(f"❌ Fehler beim Laden von {url}: {e}")
 
 driver.quit()
 
@@ -114,8 +114,8 @@ function showNext() {
 }
 
 if (slides.length > 0) {
-  showSlide(0); // Erste Seite anzeigen
-  setInterval(showNext, 10000); // alle 10 Sek wechseln
+  showSlide(0);
+  setInterval(showNext, 10000);
 }
 </script>
 </body>
