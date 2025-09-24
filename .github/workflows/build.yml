@@ -29,6 +29,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
+          git pull --rebase origin main
           git add slideshow.html
           git commit -m "automatische Slideshow-Aktualisierung" || echo "Keine Änderungen"
           git push https://$TOKEN@github.com/${{ github.repository }} HEAD:main
