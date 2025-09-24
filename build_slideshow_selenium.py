@@ -70,11 +70,16 @@ for url in links:
                     for tag in soup.select(selector):
                         tag.decompose()
 
-                # Entferne Links mit href, die "Oberartikel" enthalten
-                for tag in soup.find_all("a", href=True):
-                    if "Oberartikel" in tag["href"] or "Zum Oberartikel" in tag.text:
+                # Entferne Links mit "Zum Oberartikel" im Text oder href
+                for tag in main_content.find_all("a", href=True):
+                    if "Oberartikel" in tag["href"] or "Zum Oberartikel" in tag.text.strip():
                         tag.decompose()
-                
+
+                # Entferne verdächtige `<div>`-Container, die den Link enthalten könnten
+                for container in main_content.find_all("div"):
+                    if "Oberartikel" in container.get_text(strip=True):
+                        container.decompose()
+
                 # Bereinigtes HTML speichern
                 html = str(main_content)
                 contents.append(html)
