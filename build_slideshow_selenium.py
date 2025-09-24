@@ -109,8 +109,8 @@ color:#000;
 """
 
 for i, content in enumerate(contents):
-    html_template += f'<div class="slide" id="slide{i}">{content}</div>
-'
+    html_template += f'<div class="slide" id="slide{i}">{content}</div>'
+
 
 html_template += """
 <script>
