@@ -150,8 +150,8 @@ body, html {
 
 # Inhalte der Slides hinzufügen
 for i, content in enumerate(contents):
-    html_template += f'<div class="slide" id="slide{i}">{content}</div>
-'
+    html_template += f'<div class="slide" id="slide{i}">{content}</div>'
+
 
 # JavaScript für die Slideshow und den Fortschrittsbalken
 html_template += """
