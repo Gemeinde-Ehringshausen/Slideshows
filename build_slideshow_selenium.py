@@ -141,5 +141,4 @@ filename = "slideshow_selenium.html"
 with open(filename, "w", encoding="utf-8") as f:
     f.write(html_template)
 
-print(f"🎉 {filename} erstellt mit {len(contents)} Unterseiten")
-print("Pfad:", os.path.abspath(filename))
+print(f"🎉 {filename} erstellt mit {
