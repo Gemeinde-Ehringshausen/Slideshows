@@ -7,7 +7,7 @@
 body, html {
   margin:0; padding:0;
   width:100vw; height:100vh;
-  background:black;
+  background:white;
   overflow:hidden;
   font-family:sans-serif;
 }
@@ -49,8 +49,8 @@ Wicket.Ajax.baseUrl="infoportal?0";
 <script type="text/javascript">
 /*<![CDATA[*/
 Wicket.Event.add(window, "domready", function(event) { 
-Wicket.Ajax.ajax({"u":"./infoportal;jsessionid=455F052034EEDD09834EA104B232B011?0-1.0-DeleteBenutzerModal-dialog-footer-buttons-0-button","m":"POST","c":"id3","f":"id2","sc":"DeleteBenutzerModal:dialog:footer:buttons:0:button","e":"click"});;
-Wicket.Ajax.ajax({"u":"./infoportal;jsessionid=455F052034EEDD09834EA104B232B011?0-1.0-DeleteBenutzerModal-dialog-footer-buttons-1-button","c":"id5","bsh":[function(attrs, jqXHR, settings){document.location.hash='id4';$('#id4').modal('hide');}],"e":"click"});;
+Wicket.Ajax.ajax({"u":"./infoportal;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D?0-1.0-DeleteBenutzerModal-dialog-footer-buttons-0-button","m":"POST","c":"id3","f":"id2","sc":"DeleteBenutzerModal:dialog:footer:buttons:0:button","e":"click"});;
+Wicket.Ajax.ajax({"u":"./infoportal;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D?0-1.0-DeleteBenutzerModal-dialog-footer-buttons-1-button","c":"id5","bsh":[function(attrs, jqXHR, settings){document.location.hash='id4';$('#id4').modal('hide');}],"e":"click"});;
 var id1togglePwElement = document.getElementById('id1togglePw');
 if (id1togglePwElement) {id1togglePwElement.addEventListener('change', function (e) {
     const passwordInput = document.getElementById('id1');
@@ -61,7 +61,7 @@ if (id1togglePwElement) {id1togglePwElement.addEventListener('change', function 
     }
 });};
 $('#id4').modal({keyboard:true, show:false});
-Wicket.Ajax.ajax({"u":"./infoportal;jsessionid=455F052034EEDD09834EA104B232B011?0-1.0-SearchPanel-Form-SearchSubmit","m":"POST","c":"id7","f":"id6","sc":"SearchSubmit","e":"click","pd":true});;
+Wicket.Ajax.ajax({"u":"./infoportal;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D?0-1.0-SearchPanel-Form-SearchSubmit","m":"POST","c":"id7","f":"id6","sc":"SearchSubmit","e":"click","pd":true});;
 Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
 ;});
 /*]]>*/
@@ -80,22 +80,22 @@ Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="./start;jsessionid=455F052034EEDD09834EA104B232B011">
+					<a href="./start;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D">
 						<img class="img-responsive header-logo" src="pubres/logo-ehringshausen.png" alt="Logo Ehringshausen">
 					</a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li>
-							<a href="./suche;jsessionid=455F052034EEDD09834EA104B232B011">Betreuungsangebot</a>
+							<a href="./suche;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D">Betreuungsangebot</a>
 						</li>
 						<li class="active">
-							<a href="./infoportal;jsessionid=455F052034EEDD09834EA104B232B011">Infoportal</a>
+							<a href="./infoportal;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D">Infoportal</a>
 						</li>
 						
 						
 			
-						<li id="id8"><a href="./sb/login;jsessionid=455F052034EEDD09834EA104B232B011">Login</a></li>
+						<li id="id8"><a href="./sb/login;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D">Login</a></li>
 						
 						
 					</ul>
@@ -115,7 +115,7 @@ Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
 		
 		<br>
 		<div style="margin-bottom: 20px; max-height: 400px; overflow:auto;" id="idb">Sind Sie sicher, dass Sie Ihr Benutzerkonto löschen möchten? Alle Ihre abgegebenen Vormerkungen und erhaltenen Platzangebote werden gelöscht!</div>
-		<form id="id2" method="post" action="./infoportal;jsessionid=455F052034EEDD09834EA104B232B011?0-1.-DeleteBenutzerModal-Form"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden" class="hidden-fields"><input type="text" tabindex="-1" autocomplete="off"><input type="submit" tabindex="-1" name="DeleteBenutzerModal:dialog:footer:buttons:0:button" onclick=" var b=document.getElementById('id3'); if (b!=null&amp;&amp;b.onclick!=null&amp;&amp;typeof(b.onclick) != 'undefined') {  var r = Wicket.bind(b.onclick, b)(); if (r != false) b.click(); } else { b.click(); };  return false;"></div>
+		<form id="id2" method="post" action="./infoportal;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D?0-1.-DeleteBenutzerModal-Form"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden" class="hidden-fields"><input type="text" tabindex="-1" autocomplete="off"><input type="submit" tabindex="-1" name="DeleteBenutzerModal:dialog:footer:buttons:0:button" onclick=" var b=document.getElementById('id3'); if (b!=null&amp;&amp;b.onclick!=null&amp;&amp;typeof(b.onclick) != 'undefined') {  var r = Wicket.bind(b.onclick, b)(); if (r != false) b.click(); } else { b.click(); };  return false;"></div>
 			<div class="row">
 				<div class="col-xs-12"><div class=" form-group required">
             <label class="control-label" for="id1">Bitte geben Sie zur Überprüfung Ihr Benutzerkennwort ein</label>
@@ -178,7 +178,7 @@ Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
 			</div>
 			<div class="row">
 			<div class="col col-xs-12 text-center">
-				<a href="./nojavascript;jsessionid=455F052034EEDD09834EA104B232B011" class="btn  btn-lg btn-link">
+				<a href="./nojavascript;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D" class="btn  btn-lg btn-link">
             <i class="glyphicon glyphicon-arrow-right"></i>&nbsp;Anleitung: JavaScript aktivieren
         </a>
 			</div>
@@ -196,7 +196,7 @@ Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
 				<div class="col-xs-12" style="padding-left: 60px; padding-right: 60px;" id="BorkenPadding">
 					<div class="pull-right">
 
-	<form id="id6" method="post" action="./infoportal;jsessionid=455F052034EEDD09834EA104B232B011?0-1.-SearchPanel-Form" class="form-inline">
+	<form id="id6" method="post" action="./infoportal;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D?0-1.-SearchPanel-Form" class="form-inline">
 		<div class="input-group">
 			<input type="text" class="form-control" placeholder="Infoportal durchsuchen" value="" name="SearchInput">
 
@@ -207,12 +207,12 @@ Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
 				<!-- <button wicket:id="Reset"></button> -->
 			</div>
 		</div>
-	<input type="hidden" value="5UJBbuMMNLwWHek_v3zZ3bIdFtc" name="csrfToken"></form>
+	<input type="hidden" value="yswzrolcGNs6E-nNLfJylB0vBBI" name="csrfToken"></form>
 
 </div>
-					<a class="pull-right btn  btn-link" href="./infoportal-faq;jsessionid=455F052034EEDD09834EA104B232B011">
+					<a class="pull-right btn  btn-link" href="./infoportal-faq;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D">
             FAQ
-        </a> <a class="pull-right btn  btn-link" href="./infoportal-uebersicht;jsessionid=455F052034EEDD09834EA104B232B011">
+        </a> <a class="pull-right btn  btn-link" href="./infoportal-uebersicht;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D">
             Artikelübersicht
         </a>
 				</div>
@@ -258,7 +258,7 @@ Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
 		</div>
 
 		<div>
-			<a href="./infoportal/anleitung;jsessionid=455F052034EEDD09834EA104B232B011" class="btn  btn-primary">
+			<a href="./infoportal/anleitung;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D" class="btn  btn-primary">
             Artikel lesen »
         </a>
 		</div>
@@ -276,7 +276,7 @@ Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
 		</div>
 
 		<div>
-			<a href="./infoportal/Info_Einrichtungen;jsessionid=455F052034EEDD09834EA104B232B011" class="btn  btn-primary">
+			<a href="./infoportal/Info_Einrichtungen;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D" class="btn  btn-primary">
             Artikel lesen »
         </a>
 		</div>
@@ -293,7 +293,7 @@ Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
 		</div>
 
 		<div>
-			<a href="./infoportal/Formulare;jsessionid=455F052034EEDD09834EA104B232B011" class="btn  btn-primary">
+			<a href="./infoportal/Formulare;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D" class="btn  btn-primary">
             Artikel lesen »
         </a>
 		</div>
@@ -310,7 +310,7 @@ Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
 		</div>
 
 		<div>
-			<a href="./infoportal/Satzungen_Gebuehren;jsessionid=455F052034EEDD09834EA104B232B011" class="btn  btn-primary">
+			<a href="./infoportal/Satzungen_Gebuehren;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D" class="btn  btn-primary">
             Artikel lesen »
         </a>
 		</div>
@@ -327,7 +327,7 @@ Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
 		</div>
 
 		<div>
-			<a href="./infoportal/Leitbild;jsessionid=455F052034EEDD09834EA104B232B011" class="btn  btn-primary">
+			<a href="./infoportal/Leitbild;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D" class="btn  btn-primary">
             Artikel lesen »
         </a>
 		</div>
@@ -374,7 +374,7 @@ Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
 						</div>
 						<div class="columns">
 							<h4 class="footer-hl"><strong>Quicklinks</strong></h4>
-							<a style="color: #fff" href="./infoportal;jsessionid=455F052034EEDD09834EA104B232B011?0-1.-Impressum" class="btn  btn-link">
+							<a style="color: #fff" href="./infoportal;jsessionid=BBBA6DFA782D48647FB46B5663E21B6D?0-1.-Impressum" class="btn  btn-link">
             Impressum
         </a>
 						</div>
@@ -582,7 +582,7 @@ Wicket.Event.publish(Wicket.Event.Topic.AJAX_HANDLERS_BOUND);
 				<!-- <button wicket:id="Reset"></button> -->
 			</div>
 		</div>
-	<input type="hidden" value="5UJBbuMMNLwWHek_v3zZ3bIdFtc" name="csrfToken"></form>
+	<input type="hidden" value="yswzrolcGNs6E-nNLfJylB0vBBI" name="csrfToken"></form>
 
 </div>
 					<a class="pull-right btn  btn-link" href="./infoportal-faq">
