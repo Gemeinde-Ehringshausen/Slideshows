@@ -58,8 +58,8 @@ for url in links:
             main_content = soup.find("div", class_="infoportal")
             if main_content:
                 # Entferne Header, Footer und unnötige Elemente
-                for tag_name in ["header", "footer", "nav", "div"]:
-                    for tag in main_content.find_all(tag_name, class_=["navbar", "footer", "wk_notification_container", "modal"]):
+                for selector in ["nav.navbar", "div.footer", "div.modal", "div.wk_notification_container"]:
+                    for tag in soup.select(selector):
                         tag.decompose()
                 
                 # Bereinigtes HTML speichern
@@ -109,8 +109,8 @@ color:#000;
 """
 
 for i, content in enumerate(contents):
-    html_template += f'<div class="slide" id="slide{i}">{content}</div>'
-
+    html_template += f'<div class="slide" id="slide{i}">{content}</div>
+'
 
 html_template += """
 <script>
