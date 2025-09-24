@@ -84,7 +84,7 @@ setInterval(showNext,10000);
 </html>
 """
 
-with open("slideshow.html","w",encoding="utf-8") as f:
+with open("slideshow.selenium.html","w",encoding="utf-8") as f:
     f.write(html_template)
 
 print("✅ slideshow.html erstellt mit", len(contents), "Unterseiten")
