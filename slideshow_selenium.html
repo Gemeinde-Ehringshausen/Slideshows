@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Infoportal Slideshow</title>
+<style>
+/* Grundlayout */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    font-family: sans-serif;
+}
+
+/* Slideshow-Styling */
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    background: #fff;
+    overflow: auto;
+    color: #000;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* Fortschrittsbalken */
+.progress-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3); /* Hintergrund des Containers */
+    z-index: 1000; /* Immer sichtbar */
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: #00ff00; /* Farbe des Fortschrittsbalkens */
+    transition: width linear;
+}
+
+/* Überschriften */
+.titles-container {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1001; /* Über der Slideshow */
+}
+
+.title {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 18px;
+    color: gray;
+    transition: color linear;
+}
+
+.title.active {
+    color: green;
+}
+</style>
+</head>
+<body>
+
+<!-- Fortschrittsbalken -->
+<div class="progress-bar-container">
+    <div class="progress-bar" id="progress-bar"></div>
+</div>
+
+<!-- Überschriften -->
+<div class="titles-container">
+<span class="title" id="title0">Anleitung</span><span class="title" id="title1">Unsere Einrichtungen</span><span class="title" id="title2">Formulare</span><span class="title" id="title3">Gebühren und Satzungen</span><span class="title" id="title4">Unser Leitbild</span>
+</div>
+
+<!-- Slideshow-Inhalte -->
+<div class="slide" id="slide0"><div class="container infoportal">
+<div class="row">
+<div class="col-xs-12" id="BorkenPadding" style="padding-left: 60px; padding-right: 60px;">
+
+ 
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="jumbotron" id="BorkenPadding">
+<div class="row">
+
+</div>
+<div class="clearfix">
+<div class="col-xs-12" id="BorkenPadding">
+<h1>Der digitale Weg zum Betreuungsplatz</h1>
+<p></p><h3>Wenn Sie sich über die Kindertagesbetreuung in der Gemeinde Ehringshausen informieren wollen, stehen Ihnen das <a href="/ehringshausen/infoportal?120" style="font-size:20px">Infoportal</a> sowie Informationen zu den <a href="/ehringshausen/suche?124" style="font-size:20px">Betreuungsangeboten</a><span style="font-size:10px"> </span>ohne Registrierung zur Verfügung.</h3>
+<h3>Die Möglichkeit Ihr Kind bzw. Ihre Kinder für einen Betreuungsplatz vorzumerken, haben Sie nur, wenn Sie sich einmalig mit Ihren persönlichen Daten registrieren. Die Schritte zur Registrierung, das Erfassen einer Vormerkung und das Verwalten der Vormerkung sind in den unten stehenden Artikeln ausführlich erklärt.</h3><p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12" id="BorkenPadding" style="padding-left: 60px; padding-right: 60px;">
+<div class="col-md-6">
+<div>
+<div class="infoportal-previewbox">
+<div class="text-muted infoportal-preview header_content">
+<h3 class="">Registrierung</h3>
+<div class=""><ol><li>Klicken Sie in der Navigation auf "<a href="/ehringshausen/sb/login">Login</a>" und anschließend auf "<a href="/ehringshausen/sb/registrierung">Benutzerkonto erstellen</a>"   </li><li>Füllen Sie das Formular aus und bestätigen Sie durch einen Klick in die Checkbox, dass Sie die Datenschutzerklärung gelesen haben und akzeptieren </li><li>Klicken Sie anschließend auf den blauen Button „Registrieren“</li></ol>
+<p><img alt="" height="365" src="https://www.webkita.de/ehringshausen/bilder/infoportal/26146/bild.jpg" width="347"/></p>
+<p> </p>
+<div>
+<p>Im Anschluss erhalten Sie an die registrierte E-Mail-Adresse eine E-Mail mit einem Aktivierungslink (ggfls. SPAM-Ordner prüfen!). Öffnen Sie die E-Mail, klicken Sie auf den Aktivierungslink und melden Sie sich mit Ihren Benutzerdaten an (registrierte E-Mail-Adresse und Kennwort).</p>
+<p> </p>
+<p> </p>
+<h1>Aktivierung und erster Login</h1>
+<p> </p>
+<h3 style="text-align:center"><strong><span style="color:#ff0000">Für Familien, deren Kind bereits in einer Kindertagesstätte betreut wird, gilt:</span></strong></h3>
+<div>
+<p>Tragen Sie nach erstem Login Ihren persönlichen Verknüpfungscode, den Sie von uns postalisch erhalten haben, in die Eingabemaske ein. Anschließend haben Sie Zugriff auf Ihre Daten.</p>
+<p>Sollten Sie noch keinen Verknüpfungscode erhalten haben, kontaktieren Sie die Verwaltung (06443 609-26 oder <a href="mailto:kinderbetreuung@ehringshausen.de">kinderbetreuung@ehringshausen.de</a>).</p>
+<p> <img alt="" height="377" src="https://www.webkita.de/ehringshausen/bilder/infoportal/26147/bild.jpg" width="482"/></p>
+<p> </p>
+<h3 style="text-align:center"><strong> <span style="color:#ff0000">Für neue Familien gilt:</span></strong></h3>
+<p>1. Erfassen Sie die persönlichen Angaben zu den Erziehungsberechtigten</p>
+<ul><li>Klicken Sie auf den Button "Vielleicht später oder neue Familie erstellen"</li><li>Klicken Sie auf den Button "Persönliche Angaben erfassen"</li></ul>
+<p style="padding-left:60px"><img alt="" height="17" src="https://www.webkita.de/ehringshausen/bilder/infoportal/26148/bild.jpg%252525252525252525252525253FantiCache=1667285329883" style="vertical-align:middle" width="140"/></p>
+<ul><li>Klicken Sie auf den blauen Button "Bearbeiten"</li></ul>
+<p> </p>
+<p style="padding-left:60px"><img alt="" height="143" src="https://www.webkita.de/ehringshausen/bilder/infoportal/26149/bild.jpg%2525252525252525252525253FantiCache=1667286032628" width="261"/></p>
+<p> </p>
+<ul><li>Erfassen und speichern Sie Ihre persönlichen Daten (Elternteil I + II). Sollten Sie alleinerziehend sein, klicken Sie bitte die Checkbox “Ich bin alleinerziehend” an.</li></ul>
+<p> </p>
+<p>2. Erfassen Sie die persönlichen Angaben zum Kind</p>
+<ul><li>Klicken Sie auf den grünen Button "Angaben zum Kind erfassen"</li></ul>
+<p style="padding-left:60px"><img alt="" height="17" src="https://www.webkita.de/ehringshausen/bilder/infoportal/26161/bild.jpg%25252525252525252525253FantiCache=1667290504360" width="140"/></p>
+<p> </p>
+<p style="padding-left:60px"> <img alt="" height="349" src="https://www.webkita.de/ehringshausen/bilder/infoportal/26162/bild.jpg%252525252525252525253FantiCache=1667290504360" width="443"/></p>
+<p> </p>
+<p>Lesen Sie mehr zu --&gt; 
+	<a href="./anleitung/Vormerkung_erstellen;jsessionid=4CD7B6C8E4F50FE8A1D48A040B646F6C"><i class="glyphicon glyphicon-arrow-right"></i> Wie erstelle ich eine Vormerkung ?</a>
+<a href="/solms/infoportal/digitalerweg/vormerkung_erstellen"><br/></a></p>
+</div>
+<p> </p>
+</div></div>
+</div>
+<div>
+<a class="btn btn-primary" href="./anleitung/Registrierung;jsessionid=4CD7B6C8E4F50FE8A1D48A040B646F6C">
+            Artikel lesen »
+        </a>
+</div>
+</div>
+</div>
+</div><div class="col-md-6">
+<div>
+<div class="infoportal-previewbox">
+<div class="text-muted infoportal-preview header_content">
+<h3 class="">Wie erstelle ich eine Vormerkung ?</h3>
+<div class=""><p>1. Loggen Sie sich in Ihr Elternkonto ein </p>
+<p> </p>
+<p>2. Wählen Sie den Punkt "Betreuungsangebot" aus dem oberen Menüband </p>
+<p style="padding-left:30px"> <img alt="Betreuungsangebot" height="88" src="https://www.webkita.de/ehringshausen/bilder/infoportal/27939/bild.jpg" width="416"/></p>
+<p>3. Wählen Sie Ihre Wunscheinrichtung und klicken Sie dort auf "Vormerkung erstellen" </p>
+<p style="padding-left:30px"><img alt="BO_Vormerkung" height="153" src="https://www.webkita.de/ehringshausen/bilder/infoportal/27940/bild.jpg" width="409"/></p>
+<p style="padding-left:30px"> </p>
+<p>4. Ertellen Sie Ihre Vormerkung. In dieser teilen Sie uns mit, ab wann und in welchem Umfang Sie eine Betreuung wünschen. </p>
+<p style="padding-left:30px"><img alt="Vormerkung_2" height="296" src="https://www.webkita.de/ehringshausen/bilder/infoportal/27955/bild.jpg" width="449"/></p>
+<p> </p>
+<p>5. Nachdem Sie die Vormerkung gespeichert haben wird Ihnen der Empfang in einem Dialog-Fenster bestätigt. Sie haben die Möglichkeit, eine Bestätigung herunterzuladen. </p>
+<p style="padding-left:30px"><img alt="Vormerkung_erstellt" height="119" src="https://www.webkita.de/ehringshausen/bilder/infoportal/27960/bild.jpg" width="261"/></p>
+<p style="padding-left:30px"> </p>
+<p> </p>
+<p> Den weiteren Ablauf bis zum Vertragsabschluss können Sie dem folgenden Artikel entnehmnen : 
+	<a href="./anleitung/Vertragsabschluss;jsessionid=4CD7B6C8E4F50FE8A1D48A040B646F6C"><i class="glyphicon glyphicon-arrow-right"></i> Der digitale Vertragsabschluss</a>
+</p>
+<p style="padding-left:30px"> </p>
+<p style="padding-left:30px"> </p></div>
+</div>
+<div>
+<a class="btn btn-primary" href="./anleitung/Vormerkung_erstellen;jsessionid=4CD7B6C8E4F50FE8A1D48A040B646F6C">
+            Artikel lesen »
+        </a>
+</div>
+</div>
+</div>
+</div><div class="col-md-6">
+<div>
+<div class="infoportal-previewbox">
+<div class="text-muted infoportal-preview header_content">
+<h3 class="">Der digitale Vertragsabschluss</h3>
+<div class=""><p>Die von Ihnen erfassten Vormerkungen werden zentral durch unsere Kita-Koordinierung bearbeitet. </p>
+<p> </p>
+<p>Sobald wir Ihnen ein Platzangebot unterbreiten können, werden Sie hierüber per e-Mail informiert. </p>
+<p> </p>
+<p>Aus Datenschutzgründen enthält die e-Mail keine personenbezogenen Daten. Weitere Informationen erhalten Sie im Posteingang Ihres Elternkontos. </p>
+<p> </p>
+<p style="padding-left:30px"><img alt="Mail_Angebot" height="164" src="https://www.webkita.de/ehringshausen/bilder/infoportal/27961/bild.jpg" width="522"/></p>
+<p> </p>
+<p>Die Mail enthält zunächst genauere Informationen zum angebotenen Betreuungsplatz sowie Angaben zu benötigten Unterlagen. Außerdem die Kontaktdaten der Einrichtung zur Vereinbarung eines Aufnahme-Gesprächs. </p>
+<p>Am unteren Ende der Mail sind Schaltflächen zur Annahme bzw. Ablehnung des Platzangebots. </p>
+<p>Wichtig: Der angebotene Platz muss innerhalb der angegebenen Frist über die Schaltfläche angenommen werden, sonst verfällt das Angebot. </p>
+<p> </p>
+<p style="padding-left:30px"><img alt="Platzangebot_Annahme" height="139" src="https://www.webkita.de/ehringshausen/bilder/infoportal/27963/bild.jpg" width="560"/></p></div>
+</div>
+<div>
+<a class="btn btn-primary" href="./anleitung/Vertragsabschluss;jsessionid=4CD7B6C8E4F50FE8A1D48A040B646F6C">
+            Artikel lesen »
+        </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="slide" id="slide1"><div class="container infoportal">
+<div class="row">
+<div class="col-xs-12" id="BorkenPadding" style="padding-left: 60px; padding-right: 60px;">
+
+ 
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="jumbotron" id="BorkenPadding">
+<div class="row">
+</div>
+<div class="clearfix">
+<div class="col-xs-12" id="BorkenPadding">
+<h1>Herzlich Willkommen im Info-Portal der Ehringshäuser Betreuungseinrichtungen</h1>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12" id="BorkenPadding" style="padding-left: 60px; padding-right: 60px;">
+<div class="col-md-6">
+<div>
+<div class="infoportal-previewbox">
+<div class="text-muted infoportal-preview header_content">
+<h3 class="">Der digitale Weg zum Betreuungsplatz</h3>
+<div class=""><p><img alt="wegweiser_Kind_2" src="https://www.webkita.de/ehringshausen/bilder/infoportal/25954/bild.jpg"/></p></div>
+</div>
+<div>
+<a class="btn btn-primary" href="./infoportal/anleitung">
+            Artikel lesen »
+        </a>
+</div>
+</div>
+</div>
+</div><div class="col-md-6">
+<div>
+<div class="infoportal-previewbox">
+<div class="text-muted infoportal-preview header_content">
+<h3 class="">Unsere Einrichtungen stellen sich vor</h3>
+<div class=""><p><img alt="BO_Katzenfurt" src="https://www.webkita.de/ehringshausen/bilder/infoportal/25375/bild.jpg"/><img alt="BO_Mullewapp" src="https://www.webkita.de/ehringshausen/bilder/infoportal/25376/bild.jpg"/></p>
+<p><img alt="BO_Dillwiese" src="https://www.webkita.de/ehringshausen/bilder/infoportal/25371/bild.jpg"/><img alt="BO_Dillwiese" src="https://www.webkita.de/ehringshausen/bilder/infoportal/25371/bild.jpg"/></p></div>
+</div>
+<div>
+<a class="btn btn-primary" href="./infoportal/Info_Einrichtungen">
+            Artikel lesen »
+        </a>
+</div>
+</div>
+</div>
+</div><div class="col-md-6">
+<div>
+<div class="infoportal-previewbox">
+<div class="text-muted infoportal-preview header_content">
+<h3 class="">Formulare</h3>
+<div class=""><p><img alt="BO_Stifte" src="https://www.webkita.de/ehringshausen/bilder/infoportal/24398/bild.jpg"/></p></div>
+</div>
+<div>
+<a class="btn btn-primary" href="./infoportal/Formulare">
+            Artikel lesen »
+        </a>
+</div>
+</div>
+</div>
+</div><div class="col-md-6">
+<div>
+<div class="infoportal-previewbox">
+<div class="text-muted infoportal-preview header_content">
+<h3 class="">Gebühren und Satzungen</h3>
+<div class=""><p><img alt="pexels-karolina-grabowska-4040899" height="521" src="https://www.webkita.de/ehringshausen/bilder/infoportal/27973/bild.jpg" width="347"/></p></div>
+</div>
+<div>
+<a class="btn btn-primary" href="./infoportal/Satzungen_Gebuehren">
+            Artikel lesen »
+        </a>
+</div>
+</div>
+</div>
+</div><div class="col-md-6">
+<div>
+<div class="infoportal-previewbox">
+<div class="text-muted infoportal-preview header_content">
+<h3 class="">Unser Leitbild</h3>
+<div class=""><p><img alt="Leitbild" class="img-responsive" src="https://www.webkita.de/ehringshausen/bilder/infoportal/42503/bild.jpg"/></p></div>
+</div>
+<div>
+<a class="btn btn-primary" href="./infoportal/Leitbild">
+            Artikel lesen »
+        </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="slide" id="slide2"><div class="container infoportal">
+<div class="row">
+<div class="col-xs-12" id="BorkenPadding" style="padding-left: 60px; padding-right: 60px;">
+
+ 
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="jumbotron" id="BorkenPadding">
+<div class="row">
+
+</div>
+<div class="clearfix">
+<div class="col-xs-12" id="BorkenPadding">
+<h1>Formulare</h1>
+<p></p><p>Nachfolgend finden Sie eine Vielzahl von Formularen, die für die Anmeldung und spätere Betreuung Ihres Kindes erforderlich sind. </p>
+<p> </p>
+<p>Sie können diese direkt am PC ausfüllen und uns über die Upload-Funktion in Ihrem Webkita-Konto wieder zukommen lassen. </p><p></p>
+</div>
+</div>
+<div class="col-md-12" style="margin-bottom: 20px;">
+<fieldset>
+<legend>Anhänge</legend>
+<div class="col-xs-12">
+<a class="btn btn-link" href="./Formulare?5-1.-Panel-jumbotron-Article-DokumentContainer-ListView-0-ListItem">
+					Belehrung Datenschutz (.pdf)
+				</a>
+</div><div class="col-xs-12">
+<a class="btn btn-link" href="./Formulare?5-1.-Panel-jumbotron-Article-DokumentContainer-ListView-1-ListItem">
+					Belehrung Infektionsschutzgesetz (.pdf)
+				</a>
+</div><div class="col-xs-12">
+<a class="btn btn-link" href="./Formulare?5-1.-Panel-jumbotron-Article-DokumentContainer-ListView-2-ListItem">
+					Impfbescheinigung (.pdf)
+				</a>
+</div><div class="col-xs-12">
+<a class="btn btn-link" href="./Formulare?5-1.-Panel-jumbotron-Article-DokumentContainer-ListView-3-ListItem">
+					Erteilung Abholberechtigungen (.pdf)
+				</a>
+</div><div class="col-xs-12">
+<a class="btn btn-link" href="./Formulare?5-1.-Panel-jumbotron-Article-DokumentContainer-ListView-4-ListItem">
+					Einverständnis Entfernung Zecken (.pdf)
+				</a>
+</div><div class="col-xs-12">
+<a class="btn btn-link" href="./Formulare?5-1.-Panel-jumbotron-Article-DokumentContainer-ListView-5-ListItem">
+					SEPA-Mandat (.pdf)
+				</a>
+</div>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12" id="BorkenPadding" style="padding-left: 60px; padding-right: 60px;">
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="slide" id="slide3"><div class="container infoportal">
+<div class="row">
+<div class="col-xs-12" id="BorkenPadding" style="padding-left: 60px; padding-right: 60px;">
+
+ 
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="jumbotron" id="BorkenPadding">
+<div class="row">
+
+</div>
+<div class="clearfix">
+<div class="col-xs-12" id="BorkenPadding">
+<h1>Gebühren und Satzungen</h1>
+<p></p><p>Die Betreuungsgebühren und Verpflegungsentgelte werden für alle gemeindlichen Einrichtungen einheitlich durch die </p>
+<p><em>Kostenbeitragssatzung zur Satzung der Gemeinde Ehringshausen über die Benutzung der Tageseinrichtungen für Kinder (Kostenbeitragssatzung, KBS)</em></p>
+<p>geregelt. Sie gestalten sich derzeit wie folgt:  </p>
+<table border="0"><colgroup><col/><col/></colgroup><tbody><tr style="background-color:#e6e6e6"><td class="xl63" height="40" width="167">für Kinder mit folgender Betreuungszeit</td><td style="width:150px;text-align:center">ab 01.01.2023</td><td style="width:150px;text-align:center">ab 01.01.2024</td><td style="width:150px;text-align:center">ab 01.01.2025</td></tr><tr><td class="xl65" height="20">07:00 Uhr - 13:00 Uhr</td><td style="width:150px;text-align:center">       147,00 €</td><td style="width:150px;text-align:center">       150,00 €</td><td style="width:150px;text-align:center">       153,00 €</td></tr><tr><td class="xl65" height="20">07:00 Uhr - 16:30 Uhr</td><td style="width:150px;text-align:center">       232,75 €</td><td style="width:150px;text-align:center">       237,50 €</td><td style="width:150px;text-align:center">       242,25 €</td></tr></tbody></table>
+<p> </p>
+<p>Eine Betreuungsstunde kostet somit: </p>
+<table border="0"><colgroup><col/></colgroup><tbody><tr style="background-color:#e6e6e6"><td style="width:150px;text-align:center">ab 01.01.2023</td><td style="width:150px;text-align:center">ab 01.01.2024</td><td style="width:150px;text-align:center">ab 01.01.2025</td></tr><tr><td style="width:150px;text-align:center">          24,50 €</td><td style="width:150px;text-align:center">          25,00 €</td><td style="width:150px;text-align:center">          25,50 €</td></tr></tbody></table>
+<p> </p>
+<p>Besuchen gleichzeitig mehrere Kinder einer Familie die Kindertagesstätte, wird für das Kind mit dem höheren Kostenbeitrag der volle Beitrag erhoben.</p>
+<p>Weitere Kinder der Familie sind vollständig vom Kostenbeitrag befreit.</p>
+<p>Ein Kostenbeitrag für Kinder ab dem vollendeten dritten Lebensjahr bis zum Schuleintritt wird nicht erhoben soweit ein Betreuungszeitraum im Umfang von bis zu sechs Stunden täglich gebucht wurde.</p>
+<p>Für die über sechs Stunden hinaus gehende Betreuungszeit wird ein anteiliger Kostenbeitrag erhoben.</p>
+<p>Für die Mittagsverpflegung wird ein pauschaler Kostenbeitrag von 80,00 € erhoben.</p>
+<p><br/>Ebenfalls können Einzelessen für 4,50 € pro Mahlzeit hinzugebucht werden.</p>
+<p> </p><p></p>
+</div>
+</div>
+<div class="col-md-12" style="margin-bottom: 20px;">
+<fieldset>
+<legend>Anhänge</legend>
+<div class="col-xs-12">
+<a class="btn btn-link" href="./Satzungen_Gebuehren?6-1.-Panel-jumbotron-Article-DokumentContainer-ListView-0-ListItem">
+					Kostenbeitragssatzung (.pdf)
+				</a>
+</div><div class="col-xs-12">
+<a class="btn btn-link" href="./Satzungen_Gebuehren?6-1.-Panel-jumbotron-Article-DokumentContainer-ListView-1-ListItem">
+					Satzung über die Benutzung der Tageseinrichtungen für Kinder in der Gemeinde Ehringshausen (.pdf)
+				</a>
+</div>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12" id="BorkenPadding" style="padding-left: 60px; padding-right: 60px;">
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="slide" id="slide4"><div class="container infoportal">
+<div class="row">
+<div class="col-xs-12" id="BorkenPadding" style="padding-left: 60px; padding-right: 60px;">
+
+ 
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12">
+<div class="jumbotron" id="BorkenPadding">
+<div class="row">
+
+</div>
+<div class="clearfix">
+<div class="col-xs-12" id="BorkenPadding">
+<h1>Unser Leitbild</h1>
+<p></p><p> </p>
+<p> </p>
+<h4 style="text-align:center"><strong><em><span style="color:#3366ff">„Besonders wichtige Schlüsselerfahrungen </span></em></strong></h4>
+<h4 style="text-align:center"><strong><em><span style="color:#3366ff">erlebt das Kind beim Eintritt in eine </span></em></strong></h4>
+<h4 style="text-align:center"><strong><em><span style="color:#3366ff">Kindertageseinrichtung, die sich zugleich als </span></em></strong></h4>
+<h4 style="text-align:center"><strong><em><span style="color:#3366ff">Modell und Spiegelbild einer heterogenen Gesellschaftsgruppe begreifen lässt. </span></em></strong></h4>
+<h4 style="text-align:center"><strong><em><span style="color:#3366ff">Das Kind </span></em></strong><strong style="font-size:1.17em"><em><span style="color:#3366ff">erfährt sich als Mitglied dieser Gruppe in der</span></em></strong></h4>
+<h4 style="text-align:center"><strong><em><span style="color:#3366ff">soziale, wirtschaftliche und kulturelle Schlüsselprozesse erlebt, </span></em></strong></h4>
+<h4 style="text-align:center"><strong><em><span style="color:#3366ff">verstanden und </span></em></strong><strong style="font-size:1.17em"><em><span style="color:#3366ff">erlernt werden können.“</span></em></strong></h4><p></p>
+</div>
+</div>
+<div class="col-md-12" style="margin-bottom: 20px;">
+<fieldset>
+<legend>Anhänge</legend>
+<div class="col-xs-12">
+<a class="btn btn-link" href="./Leitbild?7-1.-Panel-jumbotron-Article-DokumentContainer-ListView-0-ListItem">
+					Lesen Sie hier unser komplettes Leitbild (.pdf)
+				</a>
+</div>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12" id="BorkenPadding" style="padding-left: 60px; padding-right: 60px;">
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<script>
+/* JavaScript für die Slideshow, Fortschrittsbalken und Überschriften */
+
+// Variablen für die Slideshow
+let index = 0;
+const slides = document.querySelectorAll('.slide');
+const titles = document.querySelectorAll('.title');
+const progressBar = document.getElementById('progress-bar');
+const slideDuration = 10000; // Dauer pro Slide in Millisekunden (10 Sekunden)
+
+// Funktion, um den Fortschrittsbalken zu animieren
+function resetProgressBar() {
+    progressBar.style.transition = 'none'; // Keine Animation für den Reset
+    progressBar.style.width = '0%'; // Zurücksetzen
+    setTimeout(() => {
+        progressBar.style.transition = `width ${slideDuration}ms linear`; // Animation aktivieren
+        progressBar.style.width = '100%'; // Fortschrittsbalken füllen
+    }, 50); // Kleine Verzögerung, um den Reset sichtbar zu machen
+}
+
+// Funktion, um die Überschriften zu animieren
+function resetTitles() {
+    titles.forEach(title => title.classList.remove('active'));
+    titles[index].classList.add('active');
+}
+
+// Funktion, um eine Slide anzuzeigen
+function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[i].classList.add('active');
+}
+
+// Funktion, um zur nächsten Slide zu wechseln
+function showNext() {
+    index = (index + 1) % slides.length; // Nächste Slide oder zurück zur ersten
+    showSlide(index);
+    resetProgressBar(); // Fortschrittsbalken zurücksetzen und starten
+    resetTitles(); // Überschrift aktualisieren
+}
+
+// Slideshow starten
+if (slides.length > 0) {
+    showSlide(0); // Erste Slide anzeigen
+    resetProgressBar(); // Fortschrittsbalken starten
+    resetTitles(); // Erste Überschrift aktivieren
+    setInterval(showNext, slideDuration); // Automatischer Wechsel nach der festgelegten Dauer
+}
+</script>
+</body>
+</html>
