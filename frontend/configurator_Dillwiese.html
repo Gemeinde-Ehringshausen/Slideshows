@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dillwiese - Slideshow Konfigurator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dillwiese - Slideshow Konfigurator</h1>
+    <form id="configForm">
+        <div class="form-group">
+            <label for="urls">Seiten-URLs (eine pro Zeile):</label>
+            <textarea id="urls" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="titles">Überschriften (eine pro Zeile, in der gleichen Reihenfolge wie die URLs):</label>
+            <textarea id="titles" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="duration">Dauer pro Slide (in Sekunden):</label>
+            <input type="number" id="duration" min="1" value="10">
+        </div>
+        <button type="button" onclick="saveConfig()">Speichern</button>
+    </form>
+
+    <script>
+        // Funktion zum Laden der aktuellen Konfiguration
+        async function loadConfig() {
+            try {
+                const response = await fetch('/config/dillwiese_config.json');
+                if (!response.ok) throw new Error("Konfiguration konnte nicht geladen werden.");
+                const config = await response.json();
+
+                document.getElementById("urls").value = config.urls.join("
+");
+                document.getElementById("titles").value = config.titles.join("
+");
+                document.getElementById("duration").value = config.duration;
+            } catch (error) {
+                console.error("Fehler beim Laden der Konfiguration:", error);
+                alert("Fehler beim Laden der Konfiguration. Bitte überprüfe die Datei 'dillwiese_config.json'.");
+            }
+        }
+
+        // Funktion zum Speichern der Konfiguration
+        async function saveConfig() {
+            const urls = document.getElementById("urls").value.trim().split("
+");
+            const titles = document.getElementById("titles").value.trim().split("
+");
+            const duration = parseInt(document.getElementById("duration").value.trim(), 10);
+
+            if (urls.length !== titles.length) {
+                alert("Die Anzahl der URLs und Titel muss übereinstimmen!");
+                return;
+            }
+
+            const config = { urls, titles, duration };
+            const blob = new Blob([JSON.stringify(config, null, 2)], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "dillwiese_config.json";
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Beim Laden der Seite die Konfiguration laden
+        loadConfig();
+    </script>
+</body>
+</html>
 
