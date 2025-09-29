@@ -47,6 +47,28 @@ body, html {
     background: #00ff00; /* Farbe des Fortschrittsbalkens */
     transition: width linear;
 }
+
+/* Überschriften */
+.titles-container {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1001; /* Über der Slideshow */
+}
+
+.title {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 18px;
+    color: gray;
+    transition: color linear;
+}
+
+.title.active {
+    color: green;
+}
 </style>
 </head>
 <body>
@@ -54,6 +76,11 @@ body, html {
 <!-- Fortschrittsbalken -->
 <div class="progress-bar-container">
     <div class="progress-bar" id="progress-bar"></div>
+</div>
+
+<!-- Überschriften -->
+<div class="titles-container">
+<span class="title" id="title0">Anleitung</span><span class="title" id="title1">Unsere Einrichtungen</span><span class="title" id="title2">Formulare</span><span class="title" id="title3">Gebühren und Satzungen</span><span class="title" id="title4">Unser Leitbild</span>
 </div>
 
 <!-- Slideshow-Inhalte -->
@@ -125,14 +152,14 @@ body, html {
 <p style="padding-left:60px"> <img alt="" height="349" src="https://www.webkita.de/ehringshausen/bilder/infoportal/26162/bild.jpg%252525252525252525253FantiCache=1667290504360" width="443"/></p>
 <p> </p>
 <p>Lesen Sie mehr zu --&gt; 
-	<a href="./anleitung/Vormerkung_erstellen;jsessionid=8503E4097A7FC7729B31552C320DE8DE"><i class="glyphicon glyphicon-arrow-right"></i> Wie erstelle ich eine Vormerkung ?</a>
+	<a href="./anleitung/Vormerkung_erstellen;jsessionid=04E489CCD495D54E31AFA8DDC64F4B50"><i class="glyphicon glyphicon-arrow-right"></i> Wie erstelle ich eine Vormerkung ?</a>
 <a href="/solms/infoportal/digitalerweg/vormerkung_erstellen"><br/></a></p>
 </div>
 <p> </p>
 </div></div>
 </div>
 <div>
-<a class="btn btn-primary" href="./anleitung/Registrierung;jsessionid=8503E4097A7FC7729B31552C320DE8DE">
+<a class="btn btn-primary" href="./anleitung/Registrierung;jsessionid=04E489CCD495D54E31AFA8DDC64F4B50">
             Artikel lesen »
         </a>
 </div>
@@ -158,13 +185,13 @@ body, html {
 <p style="padding-left:30px"> </p>
 <p> </p>
 <p> Den weiteren Ablauf bis zum Vertragsabschluss können Sie dem folgenden Artikel entnehmnen : 
-	<a href="./anleitung/Vertragsabschluss;jsessionid=8503E4097A7FC7729B31552C320DE8DE"><i class="glyphicon glyphicon-arrow-right"></i> Der digitale Vertragsabschluss</a>
+	<a href="./anleitung/Vertragsabschluss;jsessionid=04E489CCD495D54E31AFA8DDC64F4B50"><i class="glyphicon glyphicon-arrow-right"></i> Der digitale Vertragsabschluss</a>
 </p>
 <p style="padding-left:30px"> </p>
 <p style="padding-left:30px"> </p></div>
 </div>
 <div>
-<a class="btn btn-primary" href="./anleitung/Vormerkung_erstellen;jsessionid=8503E4097A7FC7729B31552C320DE8DE">
+<a class="btn btn-primary" href="./anleitung/Vormerkung_erstellen;jsessionid=04E489CCD495D54E31AFA8DDC64F4B50">
             Artikel lesen »
         </a>
 </div>
@@ -190,7 +217,7 @@ body, html {
 <p style="padding-left:30px"><img alt="Platzangebot_Annahme" height="139" src="https://www.webkita.de/ehringshausen/bilder/infoportal/27963/bild.jpg" width="560"/></p></div>
 </div>
 <div>
-<a class="btn btn-primary" href="./anleitung/Vertragsabschluss;jsessionid=8503E4097A7FC7729B31552C320DE8DE">
+<a class="btn btn-primary" href="./anleitung/Vertragsabschluss;jsessionid=04E489CCD495D54E31AFA8DDC64F4B50">
             Artikel lesen »
         </a>
 </div>
@@ -488,11 +515,12 @@ body, html {
 </div>
 </div></div>
 <script>
-/* JavaScript für die Slideshow und den Fortschrittsbalken */
+/* JavaScript für die Slideshow, Fortschrittsbalken und Überschriften */
 
 // Variablen für die Slideshow
 let index = 0;
 const slides = document.querySelectorAll('.slide');
+const titles = document.querySelectorAll('.title');
 const progressBar = document.getElementById('progress-bar');
 const slideDuration = 10000; // Dauer pro Slide in Millisekunden (10 Sekunden)
 
@@ -506,6 +534,12 @@ function resetProgressBar() {
     }, 50); // Kleine Verzögerung, um den Reset sichtbar zu machen
 }
 
+// Funktion, um die Überschriften zu animieren
+function resetTitles() {
+    titles.forEach(title => title.classList.remove('active'));
+    titles[index].classList.add('active');
+}
+
 // Funktion, um eine Slide anzuzeigen
 function showSlide(i) {
     slides.forEach(slide => slide.classList.remove('active'));
@@ -517,12 +551,14 @@ function showNext() {
     index = (index + 1) % slides.length; // Nächste Slide oder zurück zur ersten
     showSlide(index);
     resetProgressBar(); // Fortschrittsbalken zurücksetzen und starten
+    resetTitles(); // Überschrift aktualisieren
 }
 
 // Slideshow starten
 if (slides.length > 0) {
     showSlide(0); // Erste Slide anzeigen
     resetProgressBar(); // Fortschrittsbalken starten
+    resetTitles(); // Erste Überschrift aktivieren
     setInterval(showNext, slideDuration); // Automatischer Wechsel nach der festgelegten Dauer
 }
 </script>
