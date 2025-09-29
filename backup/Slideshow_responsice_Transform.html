@@ -19,13 +19,13 @@
       overflow: hidden; /* Verhindert Scrollen */
     }
 
-    /* Das Iframe füllt den gesamten Bildschirm */
+    /* Das Iframe fÃ¼llt den gesamten Bildschirm */
     iframe {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%; /* Füllt die gesamte Breite */
-      height: 100%; /* Füllt die gesamte Höhe */
+      width: 100%; /* FÃ¼llt die gesamte Breite */
+      height: 100%; /* FÃ¼llt die gesamte HÃ¶he */
       border: none; /* Kein Rahmen */
       transform: scale(1); /* Standard-Skalierung */
       transform-origin: top left; /* Skalierung von oben links */
@@ -42,16 +42,16 @@
 
     // Funktion zum Wechseln der URL
     function changeUrl() {
-      index = (index + 1) % urls.length; // Gehe zur nächsten URL (zyklisch)
+      index = (index + 1) % urls.length; // Gehe zur nÃ¤chsten URL (zyklisch)
       document.getElementById('slideshow').src = urls[index];
     }
 
-    // Intervall für den Wechsel (10 Sekunden)
+    // Intervall fÃ¼r den Wechsel (10 Sekunden)
     setInterval(changeUrl, 10000); // 10000 ms = 10 Sekunden
   </script>
 </head>
 <body>
-  <!-- Iframe für die Anzeige der Webseiten -->
+  <!-- Iframe fÃ¼r die Anzeige der Webseiten -->
   <iframe id="slideshow" src="https://www.webkita.de/ehringshausen/infoportal/Info_Einrichtungen/info_Koelschhausen?10"></iframe>
 </body>
 </html>
