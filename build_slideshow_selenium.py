@@ -7,7 +7,7 @@ import time
 import os
 
 # -----------------------------
-# Manuell einzutragende URLs
+# Manuell einzutragende URLs und Überschriften
 # -----------------------------
 links = [
     "https://www.webkita.de/ehringshausen/infoportal/anleitung",
@@ -15,6 +15,13 @@ links = [
     "https://www.webkita.de/ehringshausen/infoportal/Formulare",
     "https://www.webkita.de/ehringshausen/infoportal/Satzungen_Gebuehren",
     "https://www.webkita.de/ehringshausen/infoportal/Leitbild"
+]
+titles = [
+    "Anleitung",
+    "Unsere Einrichtungen",
+    "Formulare",
+    "Gebühren und Satzungen",
+    "Unser Leitbild"
 ]
 
 # -----------------------------
@@ -136,6 +143,28 @@ body, html {
     background: #00ff00; /* Farbe des Fortschrittsbalkens */
     transition: width linear;
 }
+
+/* Überschriften */
+.titles-container {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1001; /* Über der Slideshow */
+}
+
+.title {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 18px;
+    color: gray;
+    transition: color linear;
+}
+
+.title.active {
+    color: green;
+}
 </style>
 </head>
 <body>
@@ -145,22 +174,34 @@ body, html {
     <div class="progress-bar" id="progress-bar"></div>
 </div>
 
+<!-- Überschriften -->
+<div class="titles-container">
+"""
+# Überschriften hinzufügen
+for i, title in enumerate(titles):
+    html_template += f'<span class="title" id="title{i}">{title}</span>
+'
+
+html_template += """
+</div>
+
 <!-- Slideshow-Inhalte -->
 """
 
 # Inhalte der Slides hinzufügen
 for i, content in enumerate(contents):
-    html_template += f'<div class="slide" id="slide{i}">{content}</div>'
+    html_template += f'<div class="slide" id="slide{i}">{content}</div>
+'
 
-
-# JavaScript für die Slideshow und den Fortschrittsbalken
+# JavaScript für die Slideshow und die Überschriften
 html_template += """
 <script>
-/* JavaScript für die Slideshow und den Fortschrittsbalken */
+/* JavaScript für die Slideshow, Fortschrittsbalken und Überschriften */
 
 // Variablen für die Slideshow
 let index = 0;
 const slides = document.querySelectorAll('.slide');
+const titles = document.querySelectorAll('.title');
 const progressBar = document.getElementById('progress-bar');
 const slideDuration = 10000; // Dauer pro Slide in Millisekunden (10 Sekunden)
 
@@ -174,6 +215,12 @@ function resetProgressBar() {
     }, 50); // Kleine Verzögerung, um den Reset sichtbar zu machen
 }
 
+// Funktion, um die Überschriften zu animieren
+function resetTitles() {
+    titles.forEach(title => title.classList.remove('active'));
+    titles[index].classList.add('active');
+}
+
 // Funktion, um eine Slide anzuzeigen
 function showSlide(i) {
     slides.forEach(slide => slide.classList.remove('active'));
@@ -185,12 +232,14 @@ function showNext() {
     index = (index + 1) % slides.length; // Nächste Slide oder zurück zur ersten
     showSlide(index);
     resetProgressBar(); // Fortschrittsbalken zurücksetzen und starten
+    resetTitles(); // Überschrift aktualisieren
 }
 
 // Slideshow starten
 if (slides.length > 0) {
     showSlide(0); // Erste Slide anzeigen
     resetProgressBar(); // Fortschrittsbalken starten
+    resetTitles(); // Erste Überschrift aktivieren
     setInterval(showNext, slideDuration); // Automatischer Wechsel nach der festgelegten Dauer
 }
 </script>
