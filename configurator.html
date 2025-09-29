@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Konfigurator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Slideshow Konfigurator</h1>
+    <form id="configForm">
+        <div class="form-group">
+            <label for="urls">Seiten-URLs (eine pro Zeile):</label>
+            <textarea id="urls" rows="5" placeholder="https://example.com/seite1&#10;https://example.com/seite2"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="titles">Überschriften (eine pro Zeile, in der gleichen Reihenfolge wie die URLs):</label>
+            <textarea id="titles" rows="5" placeholder="Überschrift 1&#10;Überschrift 2"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="duration">Dauer pro Slide (in Sekunden):</label>
+            <input type="number" id="duration" min="1" value="10">
+        </div>
+        <button type="button" onclick="saveAndGenerate()">Speichern und Generieren</button>
+    </form>
+
+    <script>
+        // Funktion zum Laden der aktuellen Konfiguration
+        async function loadConfig() {
+            try {
+                const response = await fetch('config.json');
+                if (!response.ok) throw new Error("Konfiguration konnte nicht geladen werden.");
+                const config = await response.json();
+
+                document.getElementById("urls").value = config.urls.join("
+");
+                document.getElementById("titles").value = config.titles.join("
+");
+                document.getElementById("duration").value = config.duration;
+            } catch (error) {
+                console.error("Fehler beim Laden der Konfiguration:", error);
+                alert("Fehler beim Laden der Konfiguration. Bitte überprüfe die Datei 'config.json'.");
+            }
+        }
+
+        // Funktion zum Speichern der Konfiguration und Generieren der Slideshow
+        async function saveAndGenerate() {
+            const urls = document.getElementById("urls").value.trim().split("
+");
+            const titles = document.getElementById("titles").value.trim().split("
+");
+            const duration = parseInt(document.getElementById("duration").value.trim(), 10);
+
+            if (urls.length !== titles.length) {
+                alert("Die Anzahl der URLs und Titel muss übereinstimmen!");
+                return;
+            }
+
+            const config = {
+                urls: urls,
+                titles: titles,
+                duration: duration
+            };
+
+            try {
+                // Konfiguration speichern
+                const response = await fetch('/save-config', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(config)
+                });
+
+                if (!response.ok) throw new Error("Fehler beim Speichern der Konfiguration.");
+                alert("Konfiguration gespeichert!");
+
+                // Slideshow generieren
+                const generateResponse = await fetch('/generate-slideshow', { method: 'POST' });
+                if (!generateResponse.ok) throw new Error("Fehler beim Generieren der Slideshow.");
+                alert("Slideshow erfolgreich generiert!");
+            } catch (error) {
+                console.error("Fehler:", error);
+                alert("Es ist ein Fehler aufgetreten. Bitte überprüfe die Logs.");
+            }
+        }
+
+        // Beim Laden der Seite die Konfiguration laden
+        loadConfig();
+    </script>
+</body>
+</html>
