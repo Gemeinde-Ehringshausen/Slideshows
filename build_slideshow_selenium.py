@@ -179,8 +179,8 @@ body, html {
 """
 # Überschriften hinzufügen
 for i, title in enumerate(titles):
-    html_template += f'<span class="title" id="title{i}">{title}</span>
-'
+    html_template += f'<span class="title" id="title{i}">{title}</span>'
+
 
 html_template += """
 </div>
@@ -190,8 +190,8 @@ html_template += """
 
 # Inhalte der Slides hinzufügen
 for i, content in enumerate(contents):
-    html_template += f'<div class="slide" id="slide{i}">{content}</div>
-'
+    html_template += f'<div class="slide" id="slide{i}">{content}</div>'
+
 
 # JavaScript für die Slideshow und die Überschriften
 html_template += """
