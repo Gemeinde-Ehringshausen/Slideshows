@@ -14,7 +14,8 @@ links = [
     "https://www.webkita.de/ehringshausen/infoportal/Info_Einrichtungen",
     "https://www.webkita.de/ehringshausen/infoportal/Formulare",
     "https://www.webkita.de/ehringshausen/infoportal/Satzungen_Gebuehren",
-    "https://www.webkita.de/ehringshausen/infoportal/Leitbild"
+    "https://www.webkita.de/ehringshausen/infoportal/Leitbild",
+    "https://www.webkita.de/ehringshausen/infoportal/Info_Einrichtungen/Zauberberg?5"
 ]
 titles = [
     "Anleitung",
@@ -22,6 +23,7 @@ titles = [
     "Formulare",
     "Gebühren und Satzungen",
     "Unser Leitbild"
+    "Zauberberg"
 ]
 
 # -----------------------------
