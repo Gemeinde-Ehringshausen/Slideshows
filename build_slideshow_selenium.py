@@ -22,7 +22,7 @@ titles = [
     "Unsere Einrichtungen",
     "Formulare",
     "Gebühren und Satzungen",
-    "Unser Leitbild"
+    "Unser Leitbild",
     "Zauberberg"
 ]
 
